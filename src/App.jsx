@@ -6,7 +6,7 @@ import Header from "@/layouts/header"
 function App() {
 
   return(
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="ui-theme">
       <Header />
       <Routes>
         <Route path="React-Project/" element={<Home />} />
