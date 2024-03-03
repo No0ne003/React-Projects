@@ -1,13 +1,15 @@
 // Assets
 import githubLogoDark from '../assets/svg/github-mark-white.svg';
 import githubLogoLight from '../assets/svg/github-mark.svg';
+import palestineSvg from '@/assets/svg/Flag_of_Palestine.svg';
 
 // Components
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ModeToggle } from '@/components/mode-toggle';
 import NavLinks from '@/components/ui/NavLinks';
+import { Button } from '@/components/ui/button'
 import { useTheme } from '@/components/theme-provider';
+import { useEffect } from 'react';
 
 function Header() {
   const { theme, setTheme } = useTheme();
@@ -21,7 +23,7 @@ function Header() {
   });
 
   return (
-    <header className="container px-6 py-3 flex justify-between items-center backdrop-blur-3xl">
+    <header className="container px-6 py-3 flex justify-between items-center backdrop-blur-md sticky top-0 z-50">
       <Logo />
       <Navigation />
     </header>
@@ -44,6 +46,7 @@ function Navigation() {
 
   return (
     <nav className="flex items-center gap-6">
+      <DonateToPalestine />
       <NavLinks
         logo={theme === 'dark' ? githubLogoDark : githubLogoLight}
         name="Github"
@@ -53,5 +56,17 @@ function Navigation() {
     </nav>
   );
 }
+
+function DonateToPalestine() {
+  return (
+    <Button variant="outline" asChild>
+      <a className='space-x-2 flex items-center' href="https://donate.unrwa.org/gaza/~my-donation?_cv=1" target='_blank' rel='noopener noreferrer'>
+        <img className="size-4" src={palestineSvg} alt="Palestine" />
+        <span>Donate Now</span>
+      </a>
+    </Button>
+  )
+}
+
 
 export default Header;
