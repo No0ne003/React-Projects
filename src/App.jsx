@@ -1,13 +1,16 @@
-import { Button } from "@/components/ui/button"
 import { ThemeProvider } from "@/components/theme-provider"
-import { ModeToggle } from "@/components/mode-toggle"
+import { Route, Routes } from "react-router-dom"
+import Home from "@/pages/Home"
+import Header from "@/layouts/header"
 
 function App() {
 
   return(
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <Button>Hello Bro</Button>
-      <ModeToggle />
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <Header />
+      <Routes>
+        <Route path="React-Project/" element={<Home />} />
+      </Routes>
     </ThemeProvider>
   )
 }
