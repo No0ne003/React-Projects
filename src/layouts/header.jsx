@@ -45,7 +45,7 @@ function Navigation() {
   const { theme } = useTheme();
 
   return (
-    <nav className="flex items-center gap-6">
+    <nav className="flex items-center gap-2 sm:gap-6">
       <DonateToPalestine />
       <NavLinks
         logo={theme === 'dark' ? githubLogoDark : githubLogoLight}
@@ -60,9 +60,9 @@ function Navigation() {
 function DonateToPalestine() {
   return (
     <Button variant="outline" asChild>
-      <a className='space-x-2 flex items-center' href="https://donate.unrwa.org/gaza/~my-donation?_cv=1" target='_blank' rel='noopener noreferrer'>
+      <a className='sm:space-x-2 sm:flex sm:items-center' href="https://donate.unrwa.org/gaza/~my-donation?_cv=1" target='_blank' rel='noopener noreferrer'>
         <img className="size-4" src={palestineSvg} alt="Palestine" />
-        <span>Donate Now</span>
+        <span className='hidden sm:block'>Donate Now</span>
       </a>
     </Button>
   )
