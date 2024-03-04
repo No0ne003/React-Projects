@@ -1,6 +1,6 @@
 // Assets
-import githubLogoDark from '../assets/svg/github-mark-white.svg';
-import githubLogoLight from '../assets/svg/github-mark.svg';
+import githubLogoDark from '@/assets/svg/github-mark-white.svg';
+import githubLogoLight from '@/assets/svg/github-mark.svg';
 import palestineSvg from '@/assets/svg/Flag_of_Palestine.svg';
 
 // Components
