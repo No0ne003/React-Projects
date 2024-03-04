@@ -1,7 +1,10 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import { Route, Routes } from "react-router-dom"
-import Home from "@/pages/Home"
+// Layouts
 import Header from "@/layouts/header"
+// Pages
+import Home from "@/pages/Home"
+import NotFound from '@/pages/404'
 
 function App() {
 
@@ -9,7 +12,10 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="ui-theme">
       <Header />
       <Routes>
-        <Route path="React-Project/" element={<Home />} />
+        <Route path='React-Project'>
+          <Route index element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </ThemeProvider>
   )
