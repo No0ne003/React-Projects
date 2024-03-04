@@ -1,5 +1,8 @@
 # React-Projects
 
+[![](https://img.shields.io/github/stars/No0ne003/React-Project?style=for-the-badge&logo=github&color=83c5be&logoColor=D9E0EE&labelColor=252733)](https://github.com/No0ne003/React-Project.git)
+[![](https://img.shields.io/github/last-commit/No0ne003/React-Project?style=for-the-badge&color=006d77&logoColor=D9E0EE&labelColor=252733)](https://github.com/No0ne003/React-Project.git)
+
 Welcome to the React-Projects repository! This project is a collection of React applications bundled together using Vite, styled with Tailwind CSS, and enhanced with UI components from ui.shadcn. It's a powerful and flexible setup that allows you to manage and deploy multiple React projects within a single application.
 
 ## Table of Contents
