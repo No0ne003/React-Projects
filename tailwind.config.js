@@ -6,6 +6,7 @@ export default {
   content: [
     './index.html',
     './pages/*.{js,jsx}',
+    './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './src/**/*.{js,jsx}',
   ],
@@ -66,7 +67,7 @@ export default {
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: "100px" },
         },
       },
       animation: {
