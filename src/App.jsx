@@ -6,7 +6,7 @@ import Header from "@/layouts/header";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/404";
 import Accordion from "@/pages/accordion/accordion";
-import RandomColor from "@/pages/RandomColor"
+import RandomColor from "@/pages/RandomColor";
 import StarRating from "@/pages/starRating";
 
 function App() {
@@ -15,10 +15,10 @@ function App() {
       <Header />
       <Routes>
         <Route path="React-Project">
-          <Route index element={<Home />} /> 
+          <Route index element={<Home />} />
           {/* Accordion component */}
           <Route path="accordion" element={<Accordion />} />
-          {/* Random color generator */} 
+          {/* Random color generator */}
           <Route path="color-generator" element={<RandomColor />} />
           {/* Star Rating */}
           <Route path="star-rating" element={<StarRating />} />
