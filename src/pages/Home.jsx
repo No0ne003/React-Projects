@@ -7,6 +7,7 @@ function Home() {
       <p className="text-neutral-500 text-xs">I&apos;ll start on it when add the first componenet (project)</p>
       <Link to='accordion'>accordion</Link>
       <Link to='color-generator'>random Color Generator</Link>
+      <Link to='star-rating'>star rating</Link>
     </div>
   );
 }

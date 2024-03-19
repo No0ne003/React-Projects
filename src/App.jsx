@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/404";
 import Accordion from "@/pages/accordion/accordion";
 import RandomColor from "@/pages/RandomColor"
+import StarRating from "@/pages/starRating";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="accordion" element={<Accordion />} />
           {/* Random color generator */} 
           <Route path="color-generator" element={<RandomColor />} />
+          {/* Star Rating */}
+          <Route path="star-rating" element={<StarRating />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
