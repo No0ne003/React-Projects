@@ -6,6 +6,7 @@ function Home() {
       <p className="text-xl">this page under <span className="font-bold text-primary">development</span></p> 
       <p className="text-neutral-500 text-xs">I&apos;ll start on it when add the first componenet (project)</p>
       <Link to='accordion'>accordion</Link>
+      <Link to='color-generator'>random Color Generator</Link>
     </div>
   );
 }

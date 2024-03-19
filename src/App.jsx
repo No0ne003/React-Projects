@@ -6,6 +6,7 @@ import Header from "@/layouts/header";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/404";
 import Accordion from "@/pages/accordion/accordion";
+import RandomColor from "@/pages/RandomColor"
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route index element={<Home />} /> 
           {/* Accordion component */}
           <Route path="accordion" element={<Accordion />} />
+          {/* Random color generator */} 
+          <Route path="color-generator" element={<RandomColor />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
