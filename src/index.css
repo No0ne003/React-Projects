@@ -58,10 +58,11 @@
   }
 
   *::-webkit-scrollbar {
-    @apply w-1 bg-neutral-900
+    @apply w-1 bg-neutral-900;
   }
+
   *::-webkit-scrollbar-thumb {
-    @apply bg-accent
+    @apply bg-accent;
   }
 
   body {
@@ -70,6 +71,15 @@
 
   #root {
     @apply h-screen w-screen flex flex-col overflow-x-hidden;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }
 
