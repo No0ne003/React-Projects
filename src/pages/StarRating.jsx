@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa"; // Correct import for FaStar
+import { FaStar } from "react-icons/fa";
 import { Input } from "@/components/ui/input";
 
 function StarRating({ numOfStars = 5 }) {

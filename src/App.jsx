@@ -7,7 +7,8 @@ import Home from "@/pages/Home";
 import NotFound from "@/pages/404";
 import Accordion from "@/pages/accordion/accordion";
 import RandomColor from "@/pages/RandomColor";
-import StarRating from "@/pages/starRating";
+import StarRating from "@/pages/StarRating";
+import ImageSlider from "@/pages/ImageSlider"
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="color-generator" element={<RandomColor />} />
           {/* Star Rating */}
           <Route path="star-rating" element={<StarRating />} />
+          {/* image Slider */}
+          <Route path='image-slider' element={<ImageSlider url={'https://meme-api.com/gimme'} limit={'10'} />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

@@ -8,6 +8,7 @@ function Home() {
       <Link to='accordion'>accordion</Link>
       <Link to='color-generator'>random Color Generator</Link>
       <Link to='star-rating'>star rating</Link>
+      <Link to='image-slider'>image slider</Link>
     </div>
   );
 }
