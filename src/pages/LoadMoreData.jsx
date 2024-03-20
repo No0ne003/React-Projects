@@ -16,9 +16,10 @@ function LoadMoreData() {
       const result = await response.json();
 
       if (result && result.products && result.products.length) {
-        setProducts(result.products);
+        setProducts((prevData) => [...prevData, ...result.products]);
         setLoading(false);
       }
+      console.log(result)
     } catch (e) {
       console.log(e);
       setLoading(false);
@@ -27,7 +28,7 @@ function LoadMoreData() {
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [count]);
 
   if (loading) {
     return <div>Loading data ! Please wait man</div>;
@@ -39,10 +40,10 @@ function LoadMoreData() {
     >
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3">
         {products && products.length
-          ? products.map((item) => (
+          ? products.map((item, index) => (
             <div
               className="p-5 border-border border-2 flex flex-col items-center justify-center gap-3"
-              key={item.id}
+              key={index}
             >
               <img src={item.thumbnail} alt={item.title} />
               <p className="font-mono">{item.title}</p>
@@ -51,7 +52,9 @@ function LoadMoreData() {
           : null}
       </div>
       <div className="btn-container">
-        <Button variant="secondary">Load More Products</Button>
+        <Button onClick={() => setCount(count + 1)} variant="secondary">
+          Load More Products
+        </Button>
       </div>
     </div>
   );
