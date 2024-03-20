@@ -9,6 +9,7 @@ function Home() {
       <Link to='color-generator'>random Color Generator</Link>
       <Link to='star-rating'>star rating</Link>
       <Link to='image-slider'>image slider</Link>
+      <Link to='load-more-data'>load more button</Link>
     </div>
   );
 }

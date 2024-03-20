@@ -9,6 +9,7 @@ import Accordion from "@/pages/accordion/accordion";
 import RandomColor from "@/pages/RandomColor";
 import StarRating from "@/pages/StarRating";
 import ImageSlider from "@/pages/ImageSlider"
+import LoadMoreData from "./pages/LoadMoreData";
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
           {/* Star Rating */}
           <Route path="star-rating" element={<StarRating />} />
           {/* image Slider */}
-          <Route path='image-slider' element={<ImageSlider url={'https://meme-api.com/gimme'} limit={'10'} />} />
+          <Route path='image-slider' element={<ImageSlider url={'https://meme-api.com/gimme'} limit={10} />} />
+          {/* load more data button */}
+          <Route path='load-more-data' element={<LoadMoreData />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
