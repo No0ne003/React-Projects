@@ -10,6 +10,8 @@ import RandomColor from "@/pages/RandomColor";
 import StarRating from "@/pages/StarRating";
 import ImageSlider from "@/pages/ImageSlider"
 import LoadMoreData from "./pages/LoadMoreData";
+import TreeView from "./pages/tree-view/TreeView";
+import menus from "./pages/tree-view/data";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path='image-slider' element={<ImageSlider url={'https://meme-api.com/gimme'} limit={10} />} />
           {/* load more data button */}
           <Route path='load-more-data' element={<LoadMoreData />} />
+          {/* tree view */}
+          <Route path="tree-view" element={<TreeView menus={menus} />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

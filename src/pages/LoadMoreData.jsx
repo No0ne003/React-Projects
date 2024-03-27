@@ -36,7 +36,7 @@ function LoadMoreData() {
   if (loading) {
     return <div>Loading data ! Please wait man</div>;
   }
-  console.log(products)
+  console.log(products);
 
   return (
     <div

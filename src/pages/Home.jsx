@@ -10,6 +10,7 @@ function Home() {
       <Link to='star-rating'>star rating</Link>
       <Link to='image-slider'>image slider</Link>
       <Link to='load-more-data'>load more button</Link>
+      <Link to='tree-view'>tree view</Link>
     </div>
   );
 }
