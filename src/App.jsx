@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Route, Routes } from "react-router-dom";
+// Data
+import menus from "./pages/tree-view/data";
 // Layouts
 import Header from "@/layouts/header";
 // Pages
@@ -11,7 +13,7 @@ import StarRating from "@/pages/StarRating";
 import ImageSlider from "@/pages/ImageSlider"
 import LoadMoreData from "./pages/LoadMoreData";
 import TreeView from "./pages/tree-view/TreeView";
-import menus from "./pages/tree-view/data";
+import QRCodeGenerator from "./pages/QRCodeGenerator";
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path='load-more-data' element={<LoadMoreData />} />
           {/* tree view */}
           <Route path="tree-view" element={<TreeView menus={menus} />} />
+          {/* generate QR code */}
+          <Route path="qr-code-generator" element={<QRCodeGenerator />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

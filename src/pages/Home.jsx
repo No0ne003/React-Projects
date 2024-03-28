@@ -11,6 +11,7 @@ function Home() {
       <Link to='image-slider'>image slider</Link>
       <Link to='load-more-data'>load more button</Link>
       <Link to='tree-view'>tree view</Link>
+      <Link to='qr-code-generator'>QR code generator</Link>
     </div>
   );
 }
