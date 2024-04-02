@@ -38,7 +38,7 @@ const Cursor = ({ cursorVariant }) => {
 
   return (
     <motion.div
-      className="cursor size-8 bg-primary fixed rounded-full z-50 pointer-events-none mix-blend-darken dark:mix-blend-difference top-0 left-0 flex justify-center items-center color-black"
+      className="cursor max-lg:hidden size-8 bg-primary fixed rounded-full z-50 pointer-events-none mix-blend-darken dark:mix-blend-difference top-0 left-0 flex justify-center items-center color-black"
       variants={variants}
       animate={cursorVariant}
     >
