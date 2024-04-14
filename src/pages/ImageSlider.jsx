@@ -49,43 +49,43 @@ function ImageSlider({
   }
 
   return (
-      <div
-        className={`container flex flex-col flex-1 items-center justify-center gap-8 my-10 w-full max-h-screen relative overflow-x-hidden`}
-      >
-        <BsArrowLeftCircleFill
-          onClick={handlePrevious}
-          className="absolute size-8 text-foreground drop-shadow-xl left-4"
-        />
+    <div
+      className={`container flex flex-col flex-1 items-center justify-center gap-8 my-10 w-full max-h-screen relative overflow-x-hidden`}
+    >
+      <BsArrowLeftCircleFill
+        onClick={handlePrevious}
+        className="absolute size-8 text-foreground drop-shadow-xl left-4"
+      />
+      {images && images.length
+        ? images.map((imageItem, index) => (
+          <img
+            key={index}
+            alt={imageItem.title}
+            src={imageItem.url}
+            className={currentSlide === index ? "max-h-[60%]" : "hidden"}
+          />
+        ))
+        : null}
+      <BsArrowRightCircleFill
+        onClick={handleNext}
+        className="absolute size-8 text-foreground drop-shadow-xl right-4"
+      />
+      <span className="flex absolute bottom-4">
         {images && images.length
-          ? images.map((imageItem, index) => (
-            <img
+          ? images.map((_, index) => (
+            <button
               key={index}
-              alt={imageItem.title}
-              src={imageItem.url}
-              className={currentSlide === index ? "max-h-[60%]" : "hidden"}
-            />
+              className={
+                currentSlide === index
+                  ? "bg-foreground size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
+                  : "bg-secondary size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
+              }
+              onClick={() => setCurrentSlide(index)}
+            ></button>
           ))
           : null}
-        <BsArrowRightCircleFill
-          onClick={handleNext}
-          className="absolute size-8 text-foreground drop-shadow-xl right-4"
-        />
-        <span className="flex absolute bottom-4">
-          {images && images.length
-            ? images.map((_, index) => (
-              <button
-                key={index}
-                className={
-                  currentSlide === index
-                    ? "bg-foreground size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
-                    : "bg-secondary size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
-                }
-                onClick={() => setCurrentSlide(index)}
-              ></button>
-            ))
-            : null}
-        </span>
-      </div>
+      </span>
+    </div>
   );
 }
 
