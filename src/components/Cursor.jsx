@@ -37,7 +37,7 @@ const Cursor = ({ cursorVariant }) => {
 
   return (
     <motion.div
-      className="cursor max-lg:hidden size-8 bg-primary fixed rounded-full z-50 pointer-events-none mix-blend-normal dark:mix-blend-difference top-0 left-0 flex justify-center items-center color-black opacity-90"
+      className="cursor max-lg:hidden size-8 bg-primary fixed rounded-full z-50 pointer-events-none mix-blend-darken dark:mix-blend-difference top-0 left-0 flex justify-center items-center color-black opacity-90"
       style={{
         x: mousePosition.x - 16,
         y: mousePosition.y - 16,
