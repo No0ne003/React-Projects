@@ -6,14 +6,6 @@ import { Link } from "react-router-dom";
 function Home() {
   const [cursorVariant, setCursorVariant] = useState("default");
 
-  const handleMouseEnter = () => {
-    setCursorVariant("text");
-  };
-
-  const handleMouseLeave = () => {
-    setCursorVariant("default");
-  };
-
   return (
     <div className="flex flex-col gap-3 justify-start items-center">
       <p className="text-xl">
@@ -28,8 +20,8 @@ function Home() {
           className="py-4 px-6 border-border border-b-[1px] w-full flex"
           key={item.id}
           to={item.path}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant("default")}
         >
           {item.name}
         </Link>
