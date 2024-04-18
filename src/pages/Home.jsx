@@ -10,7 +10,13 @@ function Home() {
     <div className="flex flex-col gap-3 justify-start items-center">
       <p className="text-xl">
         this page under{" "}
-        <span className="font-bold text-primary">development</span>
+        <span
+          className="font-bold text-primary"
+          onMouseEnter={() => setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant("default")}
+        >
+          development
+        </span>
       </p>
       <p className="text-neutral-500 text-xs">
         I&apos;ll start on it when add the first componenet (project)
@@ -20,7 +26,7 @@ function Home() {
           className="py-4 px-6 border-border border-b-[1px] w-full flex"
           key={item.id}
           to={item.path}
-          onMouseEnter={() => setCursorVariant("text")}
+          onMouseEnter={() => setCursorVariant("link")}
           onMouseLeave={() => setCursorVariant("default")}
         >
           {item.name}

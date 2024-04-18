@@ -28,8 +28,11 @@ const Cursor = ({ cursorVariant }) => {
       scale: 1,
     },
     text: {
-      scale: 3,
+      scale: 2.5,
     },
+    link: {
+      scale: 3,
+    }
   };
 
   return (
@@ -42,7 +45,7 @@ const Cursor = ({ cursorVariant }) => {
       variants={variants}
       animate={cursorVariant}
     >
-      {cursorVariant === "text" ? (
+      {cursorVariant === "link" ? (
         <p className="mix-blend-darken dark:mix-blend-difference -rotate-45">
           <FaArrowRight size={20} />
         </p>
