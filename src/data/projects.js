@@ -38,6 +38,11 @@ export const projects = [
     id: 8,
     name: 'Light Dark Mode',
     path: 'light-dark-mode',
+  },
+  {
+    id: 9,
+    name: 'Scroll Indicator',
+    path: 'scroll-indicator',
   }
 ];
 
