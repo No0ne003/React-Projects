@@ -2,7 +2,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Route, Routes } from "react-router-dom";
 // Data
 import menus from "./pages/tree-view/data";
-import { projects } from "./data/projects";
 // Layouts
 import Header from "@/layouts/header";
 // Pages
