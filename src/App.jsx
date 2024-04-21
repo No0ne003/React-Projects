@@ -14,6 +14,7 @@ import ImageSlider from "@/pages/ImageSlider";
 import LoadMoreData from "./pages/LoadMoreData";
 import TreeView from "./pages/tree-view/TreeView";
 import QRCodeGenerator from "./pages/QRCodeGenerator";
+import LightDarkMode from "./pages/light-dark-mode/light-dark-mode";
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
           <Route path="tree-view" element={<TreeView menus={menus} />} />
           {/* generate QR code */}
           <Route path="qr-code-generator" element={<QRCodeGenerator />} />
+          {/* Light Dark Mode */}
+          <Route path='light-dark-mode' element={<LightDarkMode />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

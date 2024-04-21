@@ -33,6 +33,11 @@ export const projects = [
     id: 7,
     name: "QR Code Generator",
     path: 'qr-code-generator'
+  },
+  {
+    id: 8,
+    name: 'Light Dark Mode',
+    path: 'light-dark-mode',
   }
 ];
 
