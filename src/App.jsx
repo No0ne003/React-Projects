@@ -15,6 +15,7 @@ import LoadMoreData from "./pages/LoadMoreData";
 import TreeView from "./pages/tree-view/TreeView";
 import QRCodeGenerator from "./pages/QRCodeGenerator";
 import LightDarkMode from "./pages/light-dark-mode/Light-dark-mode";
+import TabTest from "./pages/tree-view/custom-tabs/Tab-test";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
           <Route path="qr-code-generator" element={<QRCodeGenerator />} />
           {/* Light Dark Mode */}
           <Route path='light-dark-mode' element={<LightDarkMode />} />
+          {/* Custom tabs component */}
+          <Route path="custom-tabs" element={<TabTest />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
