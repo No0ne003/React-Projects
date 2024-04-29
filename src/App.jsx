@@ -16,6 +16,7 @@ import TreeView from "./pages/tree-view/TreeView";
 import QRCodeGenerator from "./pages/QRCodeGenerator";
 import LightDarkMode from "./pages/light-dark-mode/Light-dark-mode";
 import TabTest from "./pages/tree-view/custom-tabs/Tab-test";
+import { ModalPopup } from "./pages/CustomModalPopup/ModalPopup";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           <Route path='light-dark-mode' element={<LightDarkMode />} />
           {/* Custom tabs component */}
           <Route path="custom-tabs" element={<TabTest />} />
+          {/* Custom Modal Popup */}
+          <Route path='modal-popup' element={<ModalPopup />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

@@ -43,6 +43,11 @@ export const projects = [
     id: 9,
     name: 'Custom Tabs',
     path: 'custom-tabs',
+  },
+  {
+    id: 10,
+    name: 'Modal Popup',
+    path: 'modal-popup',
   }
 ];
 
