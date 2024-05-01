@@ -17,8 +17,6 @@ export const GithubProfileFinder = () => {
       setUserData(data);
       setLoading(false);
     }
-
-    console.log(data);
   }
 
   function handleSumbit() {
