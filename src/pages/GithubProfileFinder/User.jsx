@@ -7,9 +7,21 @@ export const User = ({ user }) => {
     name,
     login,
     created_at,
+    message,
   } = user;
 
   const createDate = new Date(created_at);
+
+  if (message) {
+    return (
+      <h1 className="text-3xl my-10">
+        <span className="font-bold hover:underline decoration-[2px] underline-offset-4">
+          User
+        </span>{" "}
+        Not Found
+      </h1>
+    );
+  }
 
   return (
     <div className="flex flex-col justify-center items-center">
