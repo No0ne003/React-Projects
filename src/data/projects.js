@@ -48,6 +48,11 @@ export const projects = [
     id: 10,
     name: 'Modal Popup',
     path: 'modal-popup',
+  },
+  {
+    id: 11,
+    name: 'Github Profile Finder',
+    path: 'github-profile-finder',
   }
 ];
 

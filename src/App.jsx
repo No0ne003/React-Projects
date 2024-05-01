@@ -17,6 +17,7 @@ import QRCodeGenerator from "./pages/QRCodeGenerator";
 import LightDarkMode from "./pages/light-dark-mode/Light-dark-mode";
 import TabTest from "./pages/tree-view/custom-tabs/Tab-test";
 import { ModalPopup } from "./pages/CustomModalPopup/ModalPopup";
+import { GithubProfileFinder } from "./pages/GithubProfileFinder/GithubProfileFinder";
 
 function App() {
   return (
@@ -50,6 +51,8 @@ function App() {
           <Route path="custom-tabs" element={<TabTest />} />
           {/* Custom Modal Popup */}
           <Route path='modal-popup' element={<ModalPopup />} />
+          {/* Github Profile Finder */}
+          <Route path="github-profile-finder" element={<GithubProfileFinder />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
