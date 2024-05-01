@@ -13,10 +13,13 @@ export const GithubProfileFinder = () => {
     const res = await fetch(`https://api.github.com/users/${userName}`);
 
     const data = await res.json();
+
     if (data) {
       setUserData(data);
       setLoading(false);
     }
+
+    console.log(data)
   }
 
   function handleSumbit() {
@@ -26,14 +29,6 @@ export const GithubProfileFinder = () => {
   useEffect(() => {
     fetchGithubUserData();
   }, []);
-
-  if (loading) {
-    return (
-      <div className="absolute top-1/2 left-1/2 flex justify-center items-center">
-        <div className="loader "></div>
-      </div>
-    );
-  }
 
   return (
     <div className="flex flex-col gap-3 justify-start items-center py-3">
@@ -49,7 +44,13 @@ export const GithubProfileFinder = () => {
           Search
         </Button>
       </div>
-      {userData !== null ? <User user={userData} /> : null}
+      {loading ? (
+        <div className="absolute top-1/2 left-1/2 flex justify-center items-center">
+          <div className="loader "></div>
+        </div>
+      ) : userData !== null ? (
+        <User user={userData} />
+      ) : null}
     </div>
   );
 };
