@@ -45,7 +45,7 @@ export const GithubProfileFinder = () => {
         </Button>
       </div>
       {loading ? (
-        <div className="absolute top-1/2 left-1/2 flex justify-center items-center">
+        <div className="absolute inset-0 m-auto flex justify-center items-center">
           <div className="loader "></div>
         </div>
       ) : userData !== null ? (

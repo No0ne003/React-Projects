@@ -66,7 +66,7 @@ export const SearchAutoComplete = () => {
         placeholder="Search Users Here..."
       />
       {loading ? (
-        <div className="absolute w-screen h-screen flex justify-center items-center">
+        <div className="absolute inset-0 m-auto flex justify-center items-center">
           <div className="loader "></div>
         </div>
       ) : showDropDown && <Suggesstions handleClick={handleClick} data={filteredUsers} /> }
