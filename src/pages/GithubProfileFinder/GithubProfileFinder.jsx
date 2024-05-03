@@ -40,7 +40,7 @@ export const GithubProfileFinder = () => {
           value={userName}
           onChange={(event) => setUserName(event.target.value)}
         />
-        <Button onClick={handleSumbit} variant="outline">
+        <Button onClick={handleSumbit} variant="outline" type='submit'>
           Search
         </Button>
       </div>
