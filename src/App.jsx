@@ -26,7 +26,7 @@ function App() {
     <ThemeProvider defaultTheme="system" storageKey="ui-theme">
       <Header />
       <Routes>
-        <Route path="React-Project">
+        <Route path="React-Projects">
           <Route index element={<Home />} />
           {/* Accordion component */}
           <Route path="accordion" element={<Accordion />} />

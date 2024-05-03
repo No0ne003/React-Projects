@@ -33,7 +33,7 @@ function Header() {
 function Logo() {
   return (
     <div className="logo cursor-pointer">
-      <Link className="focusing" to="React-Project/">
+      <Link className="focusing" to="React-Projects/">
         <span className="font-mono">React</span>
         <span className="font-micro text-[24px] text-primary ps-[1px]">Projects</span>
       </Link>
