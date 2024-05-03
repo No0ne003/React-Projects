@@ -18,6 +18,7 @@ import LightDarkMode from "./pages/light-dark-mode/Light-dark-mode";
 import TabTest from "./pages/tree-view/custom-tabs/Tab-test";
 import { ModalPopup } from "./pages/CustomModalPopup/ModalPopup";
 import { GithubProfileFinder } from "./pages/GithubProfileFinder/GithubProfileFinder";
+import { SearchAutoComplete } from "./pages/SearchAutoComplete/SearchAutoComplete";
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
           <Route path='modal-popup' element={<ModalPopup />} />
           {/* Github Profile Finder */}
           <Route path="github-profile-finder" element={<GithubProfileFinder />} />
+          {/* Search Auto-Complete */}
+          <Route path="search-auto-complete" element={<SearchAutoComplete />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

@@ -53,6 +53,11 @@ export const projects = [
     id: 11,
     name: 'Github Profile Finder',
     path: 'github-profile-finder',
+  },
+  {
+    id: 12,
+    name: 'Search Auto-Complete',
+    path: 'search-auto-complete'
   }
 ];
 
