@@ -102,7 +102,7 @@
     box-sizing: border-box;
     background:
       linear-gradient(theme(colors.foreground) 0 0) 0 0/8px 20px,
-      linear-gradient(theme(colors.foreground)0 0) 100% 0/8px 20px,
+      linear-gradient(theme(colors.foreground) 0 0) 100% 0/8px 20px,
       radial-gradient(farthest-side, theme(colors.foreground) 90%, #0000) 0 5px/8px 8px content-box,
       theme(colors.background);
     background-repeat: no-repeat;

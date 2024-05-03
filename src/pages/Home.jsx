@@ -7,7 +7,7 @@ function Home() {
   const [cursorVariant, setCursorVariant] = useState("default");
 
   return (
-    <div className="flex flex-col gap-3 justify-start items-center">
+    <div className="container flex flex-col gap-3 justify-start items-center py-10">
       <p className="text-xl">
         this page under{" "}
         <span

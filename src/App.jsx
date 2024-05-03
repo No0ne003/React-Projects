@@ -19,6 +19,7 @@ import TabTest from "./pages/tree-view/custom-tabs/Tab-test";
 import { ModalPopup } from "./pages/CustomModalPopup/ModalPopup";
 import { GithubProfileFinder } from "./pages/GithubProfileFinder/GithubProfileFinder";
 import { SearchAutoComplete } from "./pages/SearchAutoComplete/SearchAutoComplete";
+import { TicTacToe } from "./pages/TicTacToe";
 
 function App() {
   return (
@@ -47,15 +48,20 @@ function App() {
           {/* generate QR code */}
           <Route path="qr-code-generator" element={<QRCodeGenerator />} />
           {/* Light Dark Mode */}
-          <Route path='light-dark-mode' element={<LightDarkMode />} />
+          <Route path="light-dark-mode" element={<LightDarkMode />} />
           {/* Custom tabs component */}
           <Route path="custom-tabs" element={<TabTest />} />
           {/* Custom Modal Popup */}
-          <Route path='modal-popup' element={<ModalPopup />} />
+          <Route path="modal-popup" element={<ModalPopup />} />
           {/* Github Profile Finder */}
-          <Route path="github-profile-finder" element={<GithubProfileFinder />} />
+          <Route
+            path="github-profile-finder"
+            element={<GithubProfileFinder />}
+          />
           {/* Search Auto-Complete */}
           <Route path="search-auto-complete" element={<SearchAutoComplete />} />
+          {/* Tic Tac Toe */}
+          <Route path="tic-tac-toe" element={<TicTacToe />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

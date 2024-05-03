@@ -58,6 +58,11 @@ export const projects = [
     id: 12,
     name: 'Search Auto-Complete',
     path: 'search-auto-complete'
+  },
+  {
+    id: 13,
+    name: 'Tic Tac Toe',
+    path: 'tic-tac-toe'
   }
 ];
 
