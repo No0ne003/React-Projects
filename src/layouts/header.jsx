@@ -35,7 +35,7 @@ function Logo() {
     <div className="logo cursor-pointer">
       <Link className="focusing" to="React-Project/">
         <span className="font-mono">React</span>
-        <span className="font-micro text-[24px] text-primary ps-[1px]">Project</span>
+        <span className="font-micro text-[24px] text-primary ps-[1px]">Projects</span>
       </Link>
     </div>
   );
