@@ -34,7 +34,11 @@ function LoadMoreData() {
   }, [products]);
 
   if (loading) {
-    return <div>Loading data ! Please wait man</div>;
+    return (
+      <div className="absolute inset-0 m-auto flex justify-center items-center">
+        <div className="loader "></div>
+      </div>
+    );
   }
   console.log(products);
 
