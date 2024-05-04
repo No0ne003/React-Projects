@@ -63,6 +63,11 @@ export const projects = [
     id: 13,
     name: 'Tic Tac Toe',
     path: 'tic-tac-toe'
+  },
+  {
+    id: 14,
+    name: 'Feature Flags',
+    path: 'feature-flags',
   }
 ];
 

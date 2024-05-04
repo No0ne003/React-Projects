@@ -20,11 +20,13 @@ import { ModalPopup } from "./pages/CustomModalPopup/ModalPopup";
 import { GithubProfileFinder } from "./pages/GithubProfileFinder/GithubProfileFinder";
 import { SearchAutoComplete } from "./pages/SearchAutoComplete/SearchAutoComplete";
 import { TicTacToe } from "./pages/TicTacToe";
+import FeatureFlagGlobalState from "./pages/Feature-flag/context/FeatureFlagsContext";
+import { FeatureFlags } from "./pages/Feature-flag/FeatureFlags";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="ui-theme">
-      <Header />      
+      <Header />
       <Routes>
         <Route path="React-Projects">
           <Route index element={<Home />} />
@@ -62,6 +64,15 @@ function App() {
           <Route path="search-auto-complete" element={<SearchAutoComplete />} />
           {/* Tic Tac Toe */}
           <Route path="tic-tac-toe" element={<TicTacToe />} />
+          {/* Feature Flag */}
+          <Route
+            path="feature-flags"
+            element={
+              <FeatureFlagGlobalState>
+                <FeatureFlags />
+              </FeatureFlagGlobalState>
+            }
+          />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

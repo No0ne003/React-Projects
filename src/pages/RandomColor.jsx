@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function RandomColor() {
   const [typeOfColor, settypeOfColor] = useState("hex");
-  const [color, setcolor] = useState("#2123da");
+  const [color, setcolor] = useState("#432383");
 
   function randomColorUtility(length) {
     return Math.floor(Math.random() * length);
