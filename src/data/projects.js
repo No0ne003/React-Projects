@@ -68,6 +68,11 @@ export const projects = [
     id: 14,
     name: 'Feature Flags',
     path: 'feature-flags',
+  },
+  {
+    id: 15,
+    name: 'Custom Hooks',
+    path: 'custom-hooks'
   }
 ];
 

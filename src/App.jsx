@@ -22,6 +22,7 @@ import { SearchAutoComplete } from "./pages/SearchAutoComplete/SearchAutoComplet
 import { TicTacToe } from "./pages/TicTacToe";
 import FeatureFlagGlobalState from "./pages/Feature-flag/context/FeatureFlagsContext";
 import { FeatureFlags } from "./pages/Feature-flag/FeatureFlags";
+import CustomHooks from "./pages/CustomHooks/CustomHooks";
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
               </FeatureFlagGlobalState>
             }
           />
+          {/* Custom Hooks */}
+          <Route path="custom-hooks" element={<CustomHooks />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />
