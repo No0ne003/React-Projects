@@ -6,11 +6,9 @@ const UseFetchHookTest = () => {
     {},
   );
 
-  console.log(error, data, pending);
-
   return (
-    <div>
-      <h1 className="text-2xl font-mono text-center">
+    <div className="min-h-[200px]">
+      <h1 className="text-2xl font-mono text-center mb-2">
         <span className="text-primary font-bold">useFetch</span> Hook
       </h1>
       {pending ? (
