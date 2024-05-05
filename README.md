@@ -1,11 +1,12 @@
 <h1 align="center">
   <b>React-Project</b>
-</h3> 
+</h3>
 
 <p align="center">
-  <a href="https://github.com/No0ne003/React-Project/stargazers"><img src="https://img.shields.io/github/stars/No0ne003/React-Project?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-  <a href="https://github.com/No0ne003/React-Project/commits/"><img src="https://img.shields.io/github/last-commit/No0ne003/React-Project?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
-  <img src='https://img.shields.io/github/languages/top/No0ne003/React-Project?style=for-the-badge&labelColor=363a4f&color=b7bdf8'>
+  <a href="https://github.com/No0ne003/React-Project/stargazers"><img src="https://img.shields.io/github/stars/No0ne003/React-Projects?color=a9b665&style=for-the-badge"></a>
+  <a href="https://github.com/No0ne003/React-Project/commits/"><img src="https://img.shields.io/github/last-commit/No0ne003/React-Projects?color=ea6962&style=for-the-badge">
+</a>
+   <img src="https://img.shields.io/github/languages/top/No0ne003/React-Projects?color=7daea3&style=for-the-badge">
 </p>
 <p align="center">
   <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
@@ -18,9 +19,9 @@ Welcome to the React-Projects repository! This project is a collection of React 
 
 ## Table of Contents
 
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
-  - [Contributing](#contributing)
+- [Table of Contents](#table-of-contents)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
 
 ## Getting Started
 
@@ -29,7 +30,7 @@ Follow these instructions to get the project up and running on your local machin
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/No0ne003/React-Project.git
+   git clone https://github.com/No0ne003/React-Projects.git
    ```
 
 2. **Install dependencies:**
@@ -49,4 +50,3 @@ Follow these instructions to get the project up and running on your local machin
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, improvements, or bug fixes, feel free to open an issue or submit a pull request.
-
