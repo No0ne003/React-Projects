@@ -5,97 +5,28 @@
 @tailwind utilities;
 
 @layer base {
-  /* :root { */
-  /*   --background: 220 23.077% 94.902%; */
-  /*   --foreground: 233.793 16.022% 35.49%; */
-  /*   --muted: 222.857 15.909% 82.745%; */
-  /*   --muted-foreground: 233.333 12.796% 41.373%; */
-  /*   --popover: 220 23.077% 94.902%; */
-  /*   --popover-foreground: 233.793 16.022% 35.49%; */
-  /*   --card: 220 23.077% 94.902%; */
-  /*   --card-foreground: 233.793 16.022% 35.49%; */
-  /*   --border: 225 13.559% 76.863%; */
-  /*   --input: 225 13.559% 76.863%; */
-  /*   --primary: 230.935 97.203% 71.961%; */
-  /*   --primary-foreground: 220 23.077% 94.902%; */
-  /*   --secondary: 222.857 15.909% 82.745%; */
-  /*   --secondary-foreground: 233.793 16.022% 35.49%; */
-  /*   --accent: 222.857 15.909% 82.745%; */
-  /*   --accent-foreground: 233.793 16.022% 35.49%; */
-  /*   --destructive: 347.077 86.667% 44.118%; */
-  /*   --destructive-foreground: 220 21.951% 91.961%; */
-  /*   --ring: 233.793 16.022% 35.49%; */
-  /*   --radius: 0rem; */
-  /* } */
-  /**/
-  /* .dark { */
-  /*   --background: 240 21.053% 14.902%; */
-  /*   --foreground: 226.154 63.934% 88.039%; */
-  /*   --muted: 236.842 16.239% 22.941%; */
-  /*   --muted-foreground: 226.667 35.294% 80%; */
-  /*   --popover: 240 21.053% 14.902%; */
-  /*   --popover-foreground: 226.154 63.934% 88.039%; */
-  /*   --card: 240 21.053% 14.902%; */
-  /*   --card-foreground: 226.154 63.934% 88.039%; */
-  /*   --border: 234.286 13.208% 31.176%; */
-  /*   --input: 234.286 13.208% 31.176%; */
-  /*   --primary: 231.892 97.368% 85.098%; */
-  /*   --primary-foreground: 240 21.053% 14.902%; */
-  /*   --secondary: 236.842 16.239% 22.941%; */
-  /*   --secondary-foreground: 226.154 63.934% 88.039%; */
-  /*   --accent: 236.842 16.239% 22.941%; */
-  /*   --accent-foreground: 226.154 63.934% 88.039%; */
-  /*   --destructive: 343.269 81.25% 74.902%; */
-  /*   --destructive-foreground: 240 21.311% 11.961%; */
-  /*   --ring: 226.154 63.934% 88.039%; */
-  /*   --radius: 0rem; */
-  /* } */
-
   :root {
-    --background: #f0eff2;
-    --foreground: #4d5368;
-    --muted: #d9d6de;
-    --muted-foreground: #5d5f6e;
-    --popover: #f0eff2;
-    --popover-foreground: #4d5368;
-    --card: #f0eff2;
-    --card-foreground: #4d5368;
-    --border: #d9d6de;
-    --input: #d9d6de;
-    --primary: #e2dff8;
-    --primary-foreground: #f0eff2;
-    --secondary: #efeaeb;
-    --secondary-foreground: #4d5368;
-    --accent: #efeaeb;
-    --accent-foreground: #4d5368;
-    --destructive: #562f6b;
-    --destructive-foreground: #e0e1e8;
-    --ring: #4d5368;
+    --background: 48 87% 95%;
+    --foreground: 20 5% 22%;
+    --muted: 3 59% 81%;
+    --muted-foreground: 28 11% 44%;
+    --popover: 40 38% 73%;
+    --popover-foreground: 28 11% 44%;
+    --card: 40 38% 73%;
+    --card-foreground: 28 11% 44%;
+    --border: 30, 12%, 51%;
+    --input: 40 38% 73%;
+    --primary: 333 34% 54%;
+    --primary-foreground: 323 39% 20%;
+    --secondary: 40 73% 49%;
+    --secondary-foreground: 37 80% 20%;
+    --accent: 24 88% 45%;
+    --accent-foreground: 19 97% 20%;
+    --destructive: 2 75% 46%;
+    --destructive-foreground: 358, 100%, 31%;
+    --ring: 28 11% 44%;
     --radius: 0rem;
   }
-
-  /* .dark { */
-  /*   --background: #282828; */
-  /*   --foreground: #ebdbb2; */
-  /*   --muted: #3f3a35; */
-  /*   --muted-foreground: #a19e94; */
-  /*   --popover: #3c3836; */
-  /*   --popover-foreground: #a89984; */
-  /*   --card: #3c3836; */
-  /*   --card-foreground: #a89984; */
-  /*   --border: #3c3836; */
-  /*   --input: #3c3836; */
-  /*   --primary: #b16286; */
-  /*   --primary-foreground: #d3869b; */
-  /*   --secondary: #d79921; */
-  /*   --secondary-foreground: #fabd2f; */
-  /*   --accent: #d65d0e; */
-  /*   --accent-foreground: #fe8019; */
-  /*   --destructive: #cc241d; */
-  /*   --destructive-foreground: #fb4934; */
-  /*   --ring: #a89984; */
-  /*   --radius: 0rem; */
-  /* } */
 
   .dark {
     --background: 0 0% 16%;
@@ -168,7 +99,8 @@
     background:
       linear-gradient(theme(colors.foreground) 0 0) 0 0/8px 20px,
       linear-gradient(theme(colors.foreground) 0 0) 100% 0/8px 20px,
-      radial-gradient(farthest-side, theme(colors.foreground) 90%, #0000) 0 5px/8px 8px content-box,
+      radial-gradient(farthest-side, theme(colors.foreground) 90%, #0000) 0 5px/8px
+        8px content-box,
       theme(colors.transparent);
     background-repeat: no-repeat;
     animation: l3 2s infinite linear;
