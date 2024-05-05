@@ -13,7 +13,7 @@ export const Tabs = ({ tabsContent, onChange }) => {
       <div className="flex w-fit">
         {tabsContent.map((tabItem, index) => (
           <div
-            className={`cursor-pointer hover:bg-transparent px-5 py-3 font-mono w-[100px] ${currentTabIndex === index ? 'bg-transparent' : 'bg-secondary'}`}
+            className={`cursor-pointer hover:bg-card px-5 py-3 font-mono w-[100px] ${currentTabIndex === index ? 'bg-card' : 'bg-card/50'}`}
             onClick={() => handleOnClick(index)}
             key={tabItem.label}
           >
@@ -21,7 +21,7 @@ export const Tabs = ({ tabsContent, onChange }) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center py-4 px-3 w-full">
+      <div className="flex justify-center py-4 px-3 w-full bg-card">
         {tabsContent[currentTabIndex] && tabsContent[currentTabIndex].content}
       </div>
     </div>

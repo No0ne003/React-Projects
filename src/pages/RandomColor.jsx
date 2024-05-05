@@ -19,12 +19,12 @@ function RandomColor() {
     setcolor(hexColor);
   }
 
-  function handleCreateRandomRgbColor() { 
-    const r = randomColorUtility(250)
-    const g = randomColorUtility(250)
-    const b = randomColorUtility(250)
+  function handleCreateRandomRgbColor() {
+    const r = randomColorUtility(250);
+    const g = randomColorUtility(250);
+    const b = randomColorUtility(250);
 
-    setcolor(`rgb(${r},${g},${b})`)
+    setcolor(`rgb(${r},${g},${b})`);
   }
 
   return (
@@ -32,19 +32,14 @@ function RandomColor() {
       className={`container flex flex-1 flex-col items-center justify-start gap-8 my-10 w-full h-screen`}
       style={{ background: color }}
     >
-      <Button onClick={() => settypeOfColor("hex")} variant="secondary">
-        Create HEX Color
-      </Button>
-      <Button onClick={() => settypeOfColor("rgb")} variant="secondary">
-        Create RGB Color
-      </Button>
+      <Button onClick={() => settypeOfColor("hex")}>Create HEX Color</Button>
+      <Button onClick={() => settypeOfColor("rgb")}>Create RGB Color</Button>
       <Button
         onClick={
           typeOfColor === "hex"
             ? handleCreateRandomHexColor
             : handleCreateRandomRgbColor
         }
-        variant="secondary"
       >
         Generate Random Color
       </Button>

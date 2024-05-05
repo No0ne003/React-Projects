@@ -47,7 +47,7 @@ export const FeatureFlags = () => {
 
   return (
     <div>
-      <h1 className="text-2xl text-center bg-gr py-4">Feature Flags</h1>
+      <h1 className="text-2xl text-center py-4 bg-accent">Feature Flags</h1>
       {componentsToRender.map((componentItem) =>
         checkEnabledFlags(componentItem.key) ? componentItem.component : null,
       )}

@@ -98,9 +98,7 @@ export const TicTacToe = () => {
 
       <div className="flex items-center py-10 h-[50px]">
         {winner || isDraw ? (
-          <Button onClick={handleRestart} variant="secondary">
-            Restart
-          </Button>
+          <Button onClick={handleRestart}>Restart</Button>
         ) : null}
       </div>
     </div>
@@ -111,7 +109,7 @@ export const Square = ({ value, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="border-[1px] border-primary float-left text-4xl size-[100px] text-center mr-[-1px] mt-[-1px] cursor-pointer empty:hover:bg-gr hover:bg-black hover:bg-opacity-5 font-sans font-bold flex justify-center items-center outline-none"
+      className="border-[1px] border-primary float-left text-4xl size-[100px] text-center mr-[-1px] mt-[-1px] cursor-pointer empty:hover:bg-primary/5 hover:bg-black hover:bg-opacity-5 font-sans font-bold flex justify-center items-center outline-none"
     >
       {value}
     </button>

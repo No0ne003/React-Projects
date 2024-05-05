@@ -28,7 +28,6 @@ const QRCodeGenerator = () => {
         <Button
           disabled={input && input.trim() !== "" ? false : true}
           onClick={handleGenerateQrCode}
-          variant="secondary"
         >
           Generate
         </Button>

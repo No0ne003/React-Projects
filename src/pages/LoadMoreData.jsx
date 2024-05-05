@@ -60,11 +60,7 @@ function LoadMoreData() {
           : null}
       </div>
       <div className="btn-container">
-        <Button
-          disabled={disableButton}
-          onClick={() => setCount(count + 1)}
-          variant="secondary"
-        >
+        <Button disabled={disableButton} onClick={() => setCount(count + 1)}>
           Load More Products
         </Button>
         {disableButton ? <p>you have reached to 100 products</p> : null}

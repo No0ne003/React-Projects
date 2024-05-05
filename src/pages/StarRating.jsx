@@ -19,7 +19,7 @@ function StarRating({ numOfStars = 5 }) {
   }
   const handleStarNumChange = (event) => {
     setStarNums(event.target.value);
-    console.log(starNums)
+    console.log(starNums);
   };
 
   return (
@@ -35,7 +35,7 @@ function StarRating({ numOfStars = 5 }) {
       />
 
       <div className="flex justify-center items-center w-full gap-3">
-        {Array.from({length: starNums}).map((_, index) => {
+        {Array.from({ length: starNums }).map((_, index) => {
           index += 1;
 
           return (
@@ -43,7 +43,7 @@ function StarRating({ numOfStars = 5 }) {
               key={index}
               className={
                 index <= (hover || rating)
-                  ? "active text-primary"
+                  ? "active text-accent"
                   : "inactive text-white"
               }
               onClick={() => handleClick(index)}

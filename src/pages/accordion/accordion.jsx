@@ -24,7 +24,6 @@ export default function Accordion() {
   return (
     <div className="container flex flex-1 flex-col items-center justify-center gap-8 my-10">
       <Button
-        variant="secondary"
         onClick={() => setEnableMultiSelection(!enableMultiSelection)}
       >
         Toggle Multi Selection

@@ -54,7 +54,7 @@ function ImageSlider({
     >
       <BsArrowLeftCircleFill
         onClick={handlePrevious}
-        className="absolute size-8 text-foreground drop-shadow-xl left-4"
+        className="absolute size-8 text-accent hover:text-accent/80 drop-shadow-xl left-4"
       />
       {images && images.length
         ? images.map((imageItem, index) => (
@@ -68,7 +68,7 @@ function ImageSlider({
         : null}
       <BsArrowRightCircleFill
         onClick={handleNext}
-        className="absolute size-8 text-foreground drop-shadow-xl right-4"
+        className="absolute size-8 text-accent hover:text-accent/80 drop-shadow-xl right-4"
       />
       <span className="flex absolute bottom-4">
         {images && images.length
@@ -77,8 +77,8 @@ function ImageSlider({
               key={index}
               className={
                 currentSlide === index
-                  ? "bg-foreground size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
-                  : "bg-secondary size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
+                  ? "bg-accent size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
+                  : "bg-accent-foreground size-4 outline-none border-none mx-1 cursor-pointer rounded-full"
               }
               onClick={() => setCurrentSlide(index)}
             ></button>
