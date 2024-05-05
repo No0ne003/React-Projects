@@ -10,12 +10,12 @@
     --foreground: 20 5% 22%;
     --muted: 3 59% 81%;
     --muted-foreground: 28 11% 44%;
-    --popover: 40 38% 73%;
-    --popover-foreground: 28 11% 44%;
-    --card: 40 38% 73%;
+    --popover: 30 12% 70%;
+    --popover-foreground: 28 11% 34%;
+    --card: 30 12% 70%;
     --card-foreground: 28 11% 44%;
-    --border: 30, 12%, 51%;
-    --input: 40 38% 73%;
+    --border: 30 12% 70%;
+    --input: 30 12% 70%;
     --primary: 333 34% 54%;
     --primary-foreground: 323 39% 20%;
     --secondary: 40 73% 49%;

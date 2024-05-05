@@ -46,7 +46,7 @@ const Cursor = ({ cursorVariant }) => {
       animate={cursorVariant}
     >
       {cursorVariant === "link" ? (
-        <p className="mix-blend-darken dark:mix-blend-difference -rotate-45 cursor-pointer">
+        <p className="mix-blend-darken text-black -rotate-45 cursor-pointer">
           <FaArrowRight size={20} />
         </p>
       ) : null}
