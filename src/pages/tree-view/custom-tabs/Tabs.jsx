@@ -9,11 +9,11 @@ export const Tabs = ({ tabsContent, onChange }) => {
   }
 
   return (
-    <div className="flex flex-col justify-start items-center w-fit mx-auto bg-gr">
-      <div className="flex w-fit">
+    <div className="flex flex-col justify-start items-center w-fit mx-auto border-border border-2">
+      <div className="flex w-fit ">
         {tabsContent.map((tabItem, index) => (
           <div
-            className={`cursor-pointer hover:bg-card px-5 py-3 font-mono w-[100px] ${currentTabIndex === index ? 'bg-card' : 'bg-card/50'}`}
+            className={`cursor-pointer hover:bg-card px-5 py-3 font-mono w-[100px] ${currentTabIndex === index ? 'bg-card' : 'bg-secondary/30'}`}
             onClick={() => handleOnClick(index)}
             key={tabItem.label}
           >

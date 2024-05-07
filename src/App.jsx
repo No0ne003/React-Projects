@@ -22,7 +22,9 @@ import { SearchAutoComplete } from "./pages/SearchAutoComplete/SearchAutoComplet
 import { TicTacToe } from "./pages/TicTacToe";
 import FeatureFlagGlobalState from "./pages/Feature-flag/context/FeatureFlagsContext";
 import { FeatureFlags } from "./pages/Feature-flag/FeatureFlags";
-import CustomHooks from "./pages/CustomHooks/CustomHooks";
+import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
+import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
+import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
 
 function App() {
   return (
@@ -74,8 +76,12 @@ function App() {
               </FeatureFlagGlobalState>
             }
           />
-          {/* Custom Hooks */}
-          <Route path="custom-hooks" element={<CustomHooks />} />
+          {/* useFetch */}
+          <Route path='use-fetch' element={<UseFetchHookTest />} />
+          {/* useOutsideClick */}
+          <Route path="use-outside-click" element={<UseOnClickOutsideTest />} />
+          {/* useWindowResize */}
+          <Route path="use-window-resize" element={<UseWindowResizeTest />} />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

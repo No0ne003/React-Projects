@@ -2,77 +2,89 @@ export const projects = [
   {
     id: 1,
     name: "Accordion",
-    path: 'accordion'
+    path: "accordion",
   },
   {
     id: 2,
     name: "Random Color Generator",
-    path: 'color-generator'
+    path: "color-generator",
   },
   {
     id: 3,
     name: "Star Rating",
-    path: 'star-rating'
+    path: "star-rating",
   },
   {
     id: 4,
     name: "Image Slider",
-    path: 'image-slider'
+    path: "image-slider",
   },
   {
     id: 5,
     name: "Load More Button",
-    path: 'load-more-data'
+    path: "load-more-data",
   },
   {
     id: 6,
     name: "Tree View",
-    path: 'tree-view'
+    path: "tree-view",
   },
   {
     id: 7,
     name: "QR Code Generator",
-    path: 'qr-code-generator'
+    path: "qr-code-generator",
   },
   {
     id: 8,
-    name: 'Light Dark Mode',
-    path: 'light-dark-mode',
+    name: "Light Dark Mode",
+    path: "light-dark-mode",
   },
   {
     id: 9,
-    name: 'Custom Tabs',
-    path: 'custom-tabs',
+    name: "Custom Tabs",
+    path: "custom-tabs",
   },
   {
     id: 10,
-    name: 'Modal Popup',
-    path: 'modal-popup',
+    name: "Modal Popup",
+    path: "modal-popup",
   },
   {
     id: 11,
-    name: 'Github Profile Finder',
-    path: 'github-profile-finder',
+    name: "Github Profile Finder",
+    path: "github-profile-finder",
   },
   {
     id: 12,
-    name: 'Search Auto-Complete',
-    path: 'search-auto-complete'
+    name: "Search Auto-Complete",
+    path: "search-auto-complete",
   },
   {
     id: 13,
-    name: 'Tic Tac Toe',
-    path: 'tic-tac-toe'
+    name: "Tic Tac Toe",
+    path: "tic-tac-toe",
   },
   {
     id: 14,
-    name: 'Feature Flags',
-    path: 'feature-flags',
+    name: "Feature Flags",
+    path: "feature-flags",
   },
   {
     id: 15,
-    name: 'Custom Hooks',
-    path: 'custom-hooks'
-  }
+    name: "useFetch",
+    path: "use-fetch",
+    tags: ["custom hooks"],
+  },
+  {
+    id: 16,
+    name: "useOutsideClick",
+    path: "use-outside-click",
+    tags: ["custom hooks"],
+  },
+  {
+    id: 17,
+    name: "useWindowResize",
+    path: "use-window-resize",
+    tags: ["custom hooks"],
+  },
 ];
-
