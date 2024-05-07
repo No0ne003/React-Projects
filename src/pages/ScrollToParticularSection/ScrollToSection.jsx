@@ -15,7 +15,7 @@ const ScrollToSection = () => {
     },
     {
       label: "Third Card",
-      style: "dark:bg-[#a6e3a1] bg[#40a02b]",
+      style: "dark:bg-[#a6e3a1] bg-[#40a02b]",
     },
     {
       label: "Fourth Card",
