@@ -25,6 +25,7 @@ import { FeatureFlags } from "./pages/Feature-flag/FeatureFlags";
 import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
 import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
 import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
+import ScrollToSection from "./pages/ScrollToParticularSection/ScrollToSection";
 
 function App() {
   return (
@@ -77,11 +78,16 @@ function App() {
             }
           />
           {/* useFetch */}
-          <Route path='use-fetch' element={<UseFetchHookTest />} />
+          <Route path="use-fetch" element={<UseFetchHookTest />} />
           {/* useOutsideClick */}
           <Route path="use-outside-click" element={<UseOnClickOutsideTest />} />
           {/* useWindowResize */}
           <Route path="use-window-resize" element={<UseWindowResizeTest />} />
+          {/* scroll to particular section */}
+          <Route
+            path="scroll-to-particular-section"
+            element={<ScrollToSection />}
+          />
 
           {/* Error Page */}
           <Route path="*" element={<NotFound />} />

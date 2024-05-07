@@ -87,4 +87,9 @@ export const projects = [
     path: "use-window-resize",
     tags: ["custom hooks"],
   },
+  {
+    id: 18,
+    name: 'Scroll to particular section',
+    path: 'scroll-to-particular-section',
+  }
 ];
