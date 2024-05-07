@@ -43,8 +43,8 @@ function StarRating({ numOfStars = 5 }) {
               key={index}
               className={
                 index <= (hover || rating)
-                  ? "active text-accent"
-                  : "inactive text-white"
+                  ? "active text-primary"
+                  : "inactive text-secondary-foreground/20"
               }
               onClick={() => handleClick(index)}
               onMouseMove={() => handleMouseEnter(index)}
