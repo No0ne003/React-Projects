@@ -3,10 +3,9 @@
 </h3>
 
 <p align="center">
-  <a href="https://github.com/No0ne003/React-Project/stargazers"><img src="https://img.shields.io/github/stars/No0ne003/React-Projects?color=a9b665&style=for-the-badge"></a>
-  <a href="https://github.com/No0ne003/React-Project/commits/"><img src="https://img.shields.io/github/last-commit/No0ne003/React-Projects?color=ea6962&style=for-the-badge">
-</a>
-   <img src="https://img.shields.io/github/languages/top/No0ne003/React-Projects?color=7daea3&style=for-the-badge">
+   <a href="https://github.com/No0ne003/React-Project/stargazers"><img src="https://img.shields.io/github/stars/No0ne003/React-Project?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+  <a href="https://github.com/No0ne003/React-Project/commits/"><img src="https://img.shields.io/github/last-commit/No0ne003/React-Project?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+  <img src='https://img.shields.io/github/languages/top/No0ne003/React-Project?style=for-the-badge&labelColor=363a4f&color=b7bdf8'>
 </p>
 <p align="center">
   <a href="https://tailwindcss.com"><img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"></a>
