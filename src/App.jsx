@@ -25,7 +25,7 @@ import { FeatureFlags } from "./pages/Feature-flag/FeatureFlags";
 import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
 import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
 import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
-import ScrollToSection from "./pages/ScrollToParticularSection/ScrollToSection";
+import ScrollToSection from "./pages/ScrollToSection";
 
 function App() {
   return (
