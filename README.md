@@ -44,7 +44,7 @@ Follow these instructions to get the project up and running on your local machin
    npm run dev
    ```
 
-   This will start the development server, and you can access the application at `http://localhost:3000`.
+   This will start the development server, and you can access the application at `http://localhost:5173/React-Projects/`.
 
 ## Contributing
 
