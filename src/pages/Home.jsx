@@ -18,7 +18,7 @@ function Home() {
           development
         </span>
       </p>
-      <p className="text-neutral-500 text-xs">
+      <p className="text-neutral-500 text-foreground/45">
         I&apos;ll start on it when add the first componenet (project)
       </p>
       {projects.map((item) => (
