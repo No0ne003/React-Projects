@@ -27,7 +27,7 @@ function Header() {
   });
 
   return (
-    <header className="bg-black bg-opacity-10 px-6 py-3 backdrop-blur-2xl sticky top-0 z-50">
+    <header className="dark:bg-black bg-white bg-opacity-10 px-6 py-3 backdrop-blur-2xl sticky top-0 z-50">
       <div className="container flex justify-between items-center">
         <Logo />
         <Navigation />
