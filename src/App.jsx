@@ -39,7 +39,12 @@ function App() {
         <Route path="React-Projects">
           <Route
             index
-            element={<HomeWithCursor cursorVariant={cursorVariant} />}
+            element={
+              <>
+                {" "}
+                <Home setCursorVariant={setCursorVariant} /> <Cursor cursorVariant={cursorVariant} />{" "}
+              </>
+            }
           />
 
           {/* Accordion component */}
@@ -102,15 +107,6 @@ function App() {
         </Route>
       </Routes>
     </ThemeProvider>
-  );
-}
-
-function HomeWithCursor({ cursorVariant }) {
-  return (
-    <>
-      <Home />
-      <Cursor cursorVariant={cursorVariant} />
-    </>
   );
 }
 
