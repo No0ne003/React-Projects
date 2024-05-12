@@ -25,7 +25,7 @@ function Header({ setCursorVariant }) {
   });
 
   return (
-    <header className="bg-background px-6 py-3 backdrop-blur-2xl">
+    <header className="bg-background px-6 py-3 backdrop-blur-2xl max-h-[60px]">
       <div className="container flex justify-between items-center">
         <span
           onMouseEnter={() => setCursorVariant("text")}

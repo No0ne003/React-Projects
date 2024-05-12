@@ -128,3 +128,7 @@
     }
   }
 }
+
+.landing {
+  height: calc(60vh - 60px);
+}
