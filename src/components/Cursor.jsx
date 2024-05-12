@@ -32,7 +32,7 @@ const Cursor = ({ cursorVariant }) => {
     },
     link: {
       scale: 3,
-    }
+    },
   };
 
   return (

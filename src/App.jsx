@@ -26,14 +26,22 @@ import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
 import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
 import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
 import ScrollToSection from "./pages/ScrollToSection";
+import { useState } from "react";
+import Cursor from "./components/Cursor";
 
 function App() {
+  const [cursorVariant, setCursorVariant] = useState("default");
+
   return (
     <ThemeProvider defaultTheme="system" storageKey="ui-theme">
-      <Header />
+      <Header setCursorVariant={setCursorVariant} />
       <Routes>
         <Route path="React-Projects">
-          <Route index element={<Home />} />
+          <Route
+            index
+            element={<HomeWithCursor cursorVariant={cursorVariant} />}
+          />
+
           {/* Accordion component */}
           <Route path="accordion" element={<Accordion />} />
           {/* Random color generator */}
@@ -94,6 +102,15 @@ function App() {
         </Route>
       </Routes>
     </ThemeProvider>
+  );
+}
+
+function HomeWithCursor({ cursorVariant }) {
+  return (
+    <>
+      <Home />
+      <Cursor cursorVariant={cursorVariant} />
+    </>
   );
 }
 

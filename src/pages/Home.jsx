@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Cursor from "@/components/Cursor";
 import { projects } from "@/data/projects";
 import { Link } from "react-router-dom";
 
@@ -33,7 +32,6 @@ function Home() {
         </Link>
       ))}
 
-      <Cursor cursorVariant={cursorVariant} />
     </div>
   );
 }

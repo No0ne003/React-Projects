@@ -11,13 +11,11 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme-provider";
 import { useEffect } from "react";
 
-function Header() {
+function Header({ setCursorVariant }) {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
-    // Set the theme based on system preference
     if (theme === "system") {
-      // Use the system's color scheme preference
       setTheme(
         window.matchMedia("(prefers-color-scheme: dark)")?.matches
           ? "dark"
@@ -29,8 +27,13 @@ function Header() {
   return (
     <header className="bg-background px-6 py-3 backdrop-blur-2xl">
       <div className="container flex justify-between items-center">
-        <Logo />
-        <Navigation />
+        <span
+          onMouseEnter={() => setCursorVariant("text")}
+          onMouseLeave={() => setCursorVariant("default")}
+        >
+          <Logo />
+        </span>
+        <Navigation setCursorVariant={setCursorVariant} />
       </div>
     </header>
   );
@@ -49,17 +52,28 @@ function Logo() {
   );
 }
 
-function Navigation() {
+function Navigation({ setCursorVariant }) {
   const { theme } = useTheme();
 
   return (
     <nav className="flex items-center gap-2 sm:gap-6">
-      <DonateToPalestine />
-      <NavLinks
-        logo={theme === "dark" ? githubLogoDark : githubLogoLight}
-        name="Github"
-        link="https://github.com/No0ne003/React-Project"
-      />
+      <span
+        onMouseEnter={() => setCursorVariant("text")}
+        onMouseLeave={() => setCursorVariant("default")}
+      >
+        <DonateToPalestine />
+      </span>
+      <span
+        onMouseEnter={() => setCursorVariant("text")}
+        onMouseLeave={() => setCursorVariant("default")}
+      >
+        <NavLinks
+          logo={theme === "dark" ? githubLogoDark : githubLogoLight}
+          name="Github"
+          link="https://github.com/No0ne003/React-Project"
+        />
+      </span>
+
       <ModeToggle />
     </nav>
   );
