@@ -1,45 +1,55 @@
 import { projects } from "@/data/projects";
+import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Home({ setCursorVariant }) {
   return (
-    <div className="container flex flex-col gap-3 justify-start items-center py-10">
-      <div className="landing w-full flex justify-center ml-20 flex-col">
-        <div>
-          <h1 className="text-9xl font-bold uppercase flex flex-col w-fit font-mono">
-            React{" "}
-            <span
-              onMouseEnter={() => setCursorVariant("bigText")}
-              onMouseLeave={() => setCursorVariant("default")}
-              className="text-primary"
-            >
-              Projects.
-            </span>
-          </h1>
-          <p className="pl-2 font-bold text-foreground/65">
-            this page under development
-          </p>
+    <main className="flex min-h-screen flex-col">
+      <div className="landing relative mb-24 py-12 sm:py-16 lg:pt-20 xl:pb-0">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto hidden max-w-screen-lg bg-red-300 lg:block">
+            <FaReact className="absolute right-0 text-[9rem] fill-primary -rotate-45 -translate-x-0 translate-y-[-19.5px]" />
+          </div>
+          <div className="mx-auto max-w-3xl text-center">
+            <h1 className="mt-5 text-3xl font-light leading-snug text-white sm:text-5xl sm:leading-snug lg:text-6xl lg:leading-snug">
+              Discover Awesome React.js{" "}
+              <span
+                onMouseEnter={() => setCursorVariant("bigText")}
+                onMouseLeave={() => setCursorVariant("default")}
+                className="relative inline-flex justify-center whitespace-nowrap font-bold text-primary"
+              >
+                Projects
+              </span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-md text-base leading-7 text-foreground/80">
+              Explore a curated collection of open-source projects, components,
+              React hooks, and more, all in one place.
+            </p>
+          </div>
         </div>
       </div>
-      <div className="flex flex-col w-full">
-        {projects.map((item) => (
-          <div
-            key={item.id}
-            className="py-4 px-6 border-border border-b-[0.5px] w-full first:border-t-[0.5px]"
-          >
-            <Link
-              to={item.path}
-              onMouseEnter={() => setCursorVariant("link")}
-              onMouseLeave={() => setCursorVariant("default")}
+
+      <div className="sm:px-none mx-auto mt-20 flex max-w-screen-lg flex-1 flex-col px-4">
+        <div className="flex flex-col w-[1000px]">
+          {projects.map((item) => (
+            <div
+              key={item.id}
+              className="py-4 px-6 border-border border-b-[0.5px] w-full first:border-t-[0.5px]"
             >
-              <span className="text-5xl uppercase font-bold ml-[16%]">
-                {item.name}
-              </span>
-            </Link>
-          </div>
-        ))}
+              <Link
+                to={item.path}
+                onMouseEnter={() => setCursorVariant("link")}
+                onMouseLeave={() => setCursorVariant("default")}
+              >
+                <p className="text-2xl md:text-3xl lg:text-4xl uppercase font-bold ml-[16%]">
+                  {item.name}
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
 

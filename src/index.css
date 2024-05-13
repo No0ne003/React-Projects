@@ -50,9 +50,7 @@
     --ring: 226.154 63.934% 88.039%;
     --radius: 0.5rem;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -127,8 +125,4 @@
         100% 5px;
     }
   }
-}
-
-.landing {
-  height: calc(60vh - 60px);
 }

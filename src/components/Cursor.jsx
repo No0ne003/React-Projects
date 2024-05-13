@@ -31,7 +31,7 @@ const Cursor = ({ cursorVariant }) => {
       scale: 2,
     },
     bigText: {
-      scale: 7,
+      scale: 5,
       transition: {
         duration: 0.2,
         ease: "easeOut",
