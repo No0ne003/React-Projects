@@ -1,14 +1,16 @@
 import { projects } from "@/data/projects";
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Home({ setCursorVariant }) {
   return (
     <main className="flex min-h-screen flex-col">
       <div className="landing relative mb-24 py-12 sm:py-16 lg:pt-20 xl:pb-0">
+      <div className="bg-gradient absolute -top-72 bottom-0 w-full opacity-5 h-[800px] scale-x-150 inset-x-0 lg:-top-36 lg:-bottom-14 overflow-hidden bg-background" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative mx-auto hidden max-w-screen-lg bg-red-300 lg:block">
             <FaReact className="absolute right-0 text-[9rem] fill-primary -rotate-45 -translate-x-0 translate-y-[-19.5px]" />
+            <FaRegStar className="absolute left-0 text-[7rem] fill-primary translate-x-[200px] translate-y-[-19.5]" />
           </div>
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="mt-5 text-3xl font-light leading-snug text-white sm:text-5xl sm:leading-snug lg:text-6xl lg:leading-snug">
