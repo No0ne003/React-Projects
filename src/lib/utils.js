@@ -7,6 +7,7 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+// know what theme is set and set theme
 export default function useWhatTheme() {
   const { theme, setTheme } = useTheme();
 

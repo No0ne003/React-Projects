@@ -5,6 +5,9 @@ import { useState } from "react";
 import menus from "./pages/tree-view/data";
 // Layouts
 import Header from "@/layouts/header";
+// components
+import Starfield from "react-starfield";
+import Cursor from "./components/Cursor";
 // Pages
 import Home from "@/pages/Home";
 import NotFound from "@/pages/404";
@@ -27,17 +30,12 @@ import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
 import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
 import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
 import ScrollToSection from "./pages/ScrollToSection";
-import Cursor from "./components/Cursor";
-import Starfield from "react-starfield";
-import useWhatTheme from "./lib/utils";
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
-  const { theme } = useWhatTheme();
-  console.log(theme);
 
   return (
-    <ThemeProvider defaultTheme="system" storageKey="ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
       <div className="hidden dark:block">
         <Starfield
           starCount={500}
