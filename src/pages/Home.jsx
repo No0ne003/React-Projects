@@ -35,7 +35,7 @@ function Home({ setCursorVariant }) {
                 <div className="w-36 h-[1px] bg-primary" />
               </div>
               <FaStar className="text-primary relative -left-3" />
-              <p className="text-primary text-sm">Hello there</p>
+              <p className="text-primary text-sm">Hello world</p>
             </div>
             <h1 className="mt-5 text-6xl max-sm:text-start text-foreground leading-[1.1] sm:leading-sung">
               Discover Awesome React.js{" "}
