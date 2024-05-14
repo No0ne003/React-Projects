@@ -4,11 +4,11 @@ import tailwindCssAnimate from "tailwindcss-animate";
 export default {
   darkMode: ["class"],
   content: [
-    './index.html',
-    './pages/*.{js,jsx}',
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./index.html",
+    "./pages/*.{js,jsx}",
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -75,10 +75,10 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        "micro": ['"Micro 5", sans-serif'],
-        'poppins': ['"Poppins", sans-serif']
+        micro: ['"Micro 5", sans-serif'],
+        poppins: ['"Poppins", sans-serif'],
       },
     },
   },
   plugins: [tailwindCssAnimate],
-}
+};

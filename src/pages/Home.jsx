@@ -1,5 +1,5 @@
 import { projects } from "@/data/projects";
-import { FaArrowRight, FaStar } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Home({ setCursorVariant }) {
