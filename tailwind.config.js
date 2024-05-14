@@ -76,6 +76,7 @@ export default {
       },
       fontFamily: {
         "micro": ['"Micro 5", sans-serif'],
+        'poppins': ['"Poppins", sans-serif']
       },
     },
   },
