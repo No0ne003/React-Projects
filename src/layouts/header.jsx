@@ -13,7 +13,7 @@ import useWhatTheme from "@/lib/utils";
 function Header({ setCursorVariant }) {
 
   return (
-    <header className="bg-background px-6 py-3 max-h-[60px]">
+    <header className="bg-background px-6 py-3 max-h-[60px] w-full">
       <div className="container flex justify-between items-center max-sm:p-0">
         <span
           onMouseEnter={() => setCursorVariant("text")}
