@@ -8,25 +8,13 @@ import { Link } from "react-router-dom";
 import { ModeToggle } from "@/components/mode-toggle";
 import NavLinks from "@/components/ui/NavLinks";
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/theme-provider";
-import { useEffect } from "react";
+import useWhatTheme from "@/lib/utils";
 
 function Header({ setCursorVariant }) {
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => {
-    if (theme === "system") {
-      setTheme(
-        window.matchMedia("(prefers-color-scheme: dark)")?.matches
-          ? "dark"
-          : "light",
-      );
-    }
-  });
 
   return (
-    <header className="bg-background px-6 py-3 backdrop-blur-2xl max-h-[60px]">
-      <div className="container flex justify-between items-center">
+    <header className="bg-background px-6 py-3 max-h-[60px]">
+      <div className="container flex justify-between items-center max-sm:p-0">
         <span
           onMouseEnter={() => setCursorVariant("text")}
           onMouseLeave={() => setCursorVariant("default")}
@@ -53,7 +41,7 @@ function Logo() {
 }
 
 function Navigation({ setCursorVariant }) {
-  const { theme } = useTheme();
+  const { theme } = useWhatTheme()
 
   return (
     <nav className="flex items-center gap-2 sm:gap-6">

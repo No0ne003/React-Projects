@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 // Data
 import menus from "./pages/tree-view/data";
 // Layouts
@@ -26,14 +27,26 @@ import UseFetchHookTest from "./pages/CustomHooks/use-fetch/test";
 import UseOnClickOutsideTest from "./pages/CustomHooks/use-outside-click/test";
 import { UseWindowResizeTest } from "./pages/CustomHooks/use-window-resize/test";
 import ScrollToSection from "./pages/ScrollToSection";
-import { useState } from "react";
 import Cursor from "./components/Cursor";
+import Starfield from "react-starfield";
+import useWhatTheme from "./lib/utils";
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
+  const { theme } = useWhatTheme();
+  console.log(theme);
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="ui-theme">
+      <div className="hidden dark:block">
+        <Starfield
+          starCount={500}
+          starColor={[205, 214, 244]}
+          speedFactor={0.05}
+          backgroundColor="black"
+        />
+      </div>
+
       <Header setCursorVariant={setCursorVariant} />
       <Routes>
         <Route path="React-Projects">
@@ -42,7 +55,8 @@ function App() {
             element={
               <>
                 {" "}
-                <Home setCursorVariant={setCursorVariant} /> <Cursor cursorVariant={cursorVariant} />{" "}
+                <Home setCursorVariant={setCursorVariant} />{" "}
+                <Cursor cursorVariant={cursorVariant} />{" "}
               </>
             }
           />
