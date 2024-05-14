@@ -28,7 +28,7 @@ export default function Accordion() {
       >
         Toggle Multi Selection
       </Button>
-      <div className="w-[80vw] md:w-[500px] bg-gr backdrop-blur-3xl border-border border-2 space-y-5 py-[15px] px-[10px]">
+      <div className="max-w-[500px] ackdrop-blur-3xl border-border border-2 space-y-5 py-[15px] px-[10px]">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div key={dataItem.id}>

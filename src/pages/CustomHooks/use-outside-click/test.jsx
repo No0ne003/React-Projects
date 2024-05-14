@@ -8,11 +8,11 @@ const UseOnClickOutsideTest = () => {
   useOutsideClick(ref, () => setShowContent(false));
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center h-screen">
       {showContent ? (
         <div
           ref={ref}
-          className="w-[450px] bg-gr py-4 px-5 border-border border-2"
+          className="w-[400px] bg-gr py-4 px-5 border-border border-2"
         >
           <h1 className="text-xl font-bold mb-1">This is a random content</h1>
           <p>

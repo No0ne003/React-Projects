@@ -37,7 +37,7 @@ const ScrollToSection = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center gap-4 my-10">
+    <div className="container flex flex-col justify-center items-center gap-4 my-10">
       <h1 className="text-3xl text-center">
         <span className="font-bold text-primary">Scroll</span> to a particular
         section
@@ -48,7 +48,7 @@ const ScrollToSection = () => {
           <div
             ref={index === 3 ? ref : null}
             key={index}
-            className={`rounded-md flex justify-center items-center w-full h-[600px] ${dataItem.style}`}
+            className={`rounded-md flex justify-center items-center w-full h-[350px] md:h-[600px] ${dataItem.style}`}
           >
             {" "}
             <h3 className="text-xl font-bold mix-blend-difference">

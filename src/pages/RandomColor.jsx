@@ -32,7 +32,7 @@ function RandomColor() {
       className={`container flex flex-1 flex-col items-center justify-start gap-8 my-10 w-full h-screen py-10`}
       style={{ background: color }}
     >
-      <div className="flex gap-7">
+      <div className="flex gap-7 flex-col sm:flex-row">
         <Button onClick={() => settypeOfColor("hex")}>Create HEX Color</Button>
         <Button onClick={() => settypeOfColor("rgb")}>Create RGB Color</Button>
         <Button
