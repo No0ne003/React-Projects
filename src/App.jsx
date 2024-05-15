@@ -6,8 +6,8 @@ import { useLocation } from "react-router-dom";
 import Header from "@/layouts/header";
 // components
 import Starfield from "react-starfield";
-import Cursor from "./components/Cursor";
-import Loading from "./components/ui/Loading";
+import Cursor from "@/components/Cursor";
+import Loading from "@/components/ui/Loading";
 import GoBack from "./components/ui/GoBack";
 // Data
 import menus from "./pages/tree-view/data";
