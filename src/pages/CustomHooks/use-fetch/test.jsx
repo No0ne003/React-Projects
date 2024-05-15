@@ -1,3 +1,4 @@
+import Loading from "@/components/ui/Loading";
 import useFetch from "./useFetch";
 
 const UseFetchHookTest = () => {
