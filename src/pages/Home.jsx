@@ -1,8 +1,29 @@
+import { TypewriterEffect } from "@/components/typewriter-effect";
 import { projects } from "@/data/projects";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Home({ setCursorVariant }) {
+  const words = [
+    {
+      text: "Discover",
+    },
+    {
+      text: "Awesome",
+    },
+    {
+      text: "React",
+    },
+    {
+      text: "js",
+    },
+    {
+      text: "Projects",
+      className: "primary text-primary dark:text-primary font-bold",
+    },
+  ];
+
   const renderProjectLinks = () => {
     return projects.map((item) => (
       <div
@@ -30,23 +51,26 @@ function Home({ setCursorVariant }) {
           <div className="mx-auto max-w-3xl text-center">
             <div className="flex items-center gap-2 sm:hidden">
               <div className="flex flex-col items-center gap-[1px]">
-                <div className="w-36 h-[1px] bg-primary" />
-                <div className="w-36 h-[1px] bg-primary" />
-                <div className="w-36 h-[1px] bg-primary" />
+                {["1", "2", "3"].map((item) => (
+                  <motion.div
+                    key={item}
+                    initial={{ width: 0 }}
+                    animate={{ width: 150 }}
+                    transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+                    className="h-[1px] bg-primary"
+                  />
+                ))}
               </div>
               <FaStar className="text-primary relative -left-3" />
               <p className="text-primary text-sm">Hello world</p>
             </div>
-            <h1 className="mt-5 text-6xl max-sm:text-start text-foreground leading-[1.1] sm:leading-sung">
-              Discover Awesome React.js{" "}
-              <span
-                onMouseEnter={() => setCursorVariant("bigText")}
-                onMouseLeave={() => setCursorVariant("default")}
-                className="relative inline-flex justify-center whitespace-nowrap font-bold text-primary"
-              >
-                Projects
-              </span>
-            </h1>
+            <TypewriterEffect
+              words={words}
+              className={
+                "text-start leading-[1.1] sm:leading-sm mt-5 sm:text-center h-[282px] md:h-[150px]"
+              }
+              setCursorVariant={setCursorVariant}
+            />
             <p className="max-sm:text-start sm:mx-auto mt-5 max-w-md text-base leading-7 text-foreground/80">
               Explore a curated collection of open-source projects, components,
               React hooks, and more, all in one place.
