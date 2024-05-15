@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { User } from "./User";
+import Loading from "@/components/ui/Loading";
 
 const GithubProfileFinder = () => {
   const [userName, setUserName] = useState("No0ne003");
@@ -44,11 +45,7 @@ const GithubProfileFinder = () => {
           Search
         </Button>
       </div>
-      {loading ? (
-        <div className="absolute inset-0 m-auto flex justify-center items-center">
-          <div className="loader "></div>
-        </div>
-      ) : userData !== null ? (
+      {loading ? <Loading /> : userData !== null ? (
         <User user={userData} />
       ) : null}
     </div>

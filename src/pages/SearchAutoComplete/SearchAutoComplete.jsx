@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { Suggesstions } from "./Suggesstions";
+import Loading from "@/components/ui/Loading";
 
 const SearchAutoComplete = () => {
   const [loading, setLoading] = useState(false);
@@ -65,11 +66,7 @@ const SearchAutoComplete = () => {
         name="search"
         placeholder="Search Users Here..."
       />
-      {loading ? (
-        <div className="absolute inset-0 m-auto flex justify-center items-center">
-          <div className="loader "></div>
-        </div>
-      ) : showDropDown && <Suggesstions handleClick={handleClick} data={filteredUsers} /> }
+      {loading ? <Loading /> : showDropDown && <Suggesstions handleClick={handleClick} data={filteredUsers} /> }
     </div>
   );
 };

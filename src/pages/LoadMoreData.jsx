@@ -1,3 +1,4 @@
+import Loading from "@/components/ui/Loading";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -34,11 +35,7 @@ function LoadMoreData() {
   }, [products]);
 
   if (loading) {
-    return (
-      <div className="absolute inset-0 m-auto flex justify-center items-center">
-        <div className="loader "></div>
-      </div>
-    );
+    return <Loading />
   }
   console.log(products);
 
