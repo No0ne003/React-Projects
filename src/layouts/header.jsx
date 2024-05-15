@@ -17,7 +17,7 @@ const Header = memo(function Header({ setCursorVariant }) {
   const { theme } = useWhatTheme();
 
   return (
-    <header className="bg-background px-6 py-3 max-h-[60px] w-full">
+    <header className="bg-background px-6 py-3 max-h-[60px] w-full z-50">
       <div className="container flex justify-between items-center max-sm:p-0">
         <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Logo />

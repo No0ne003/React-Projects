@@ -1,12 +1,14 @@
-import React, { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 // layout
 import Header from "@/layouts/header";
 // components
 import Starfield from "react-starfield";
 import Cursor from "./components/Cursor";
 import Loading from "./components/ui/Loading";
+import GoBack from "./components/ui/GoBack";
 // Data
 import menus from "./pages/tree-view/data";
 
@@ -49,6 +51,7 @@ const ScrollToSection = lazy(() => import("./pages/ScrollToSection"));
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
+  const location = useLocation();
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
@@ -62,6 +65,7 @@ function App() {
       </div>
 
       <Header setCursorVariant={setCursorVariant} />
+      {location.pathname !== "/React-Projects/" && <GoBack />}
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="React-Projects">
