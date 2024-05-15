@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { User } from "./User";
 
-export const GithubProfileFinder = () => {
+const GithubProfileFinder = () => {
   const [userName, setUserName] = useState("No0ne003");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -54,3 +54,5 @@ export const GithubProfileFinder = () => {
     </div>
   );
 };
+
+export default GithubProfileFinder

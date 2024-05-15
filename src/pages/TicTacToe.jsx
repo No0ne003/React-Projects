@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
-export const TicTacToe = () => {
+const TicTacToe = () => {
   const [squares, setSquares] = useState(Array(9).fill(""));
   const [isXTurn, setIsXTurn] = useState(true);
   const [winner, setWinner] = useState(null);
@@ -115,3 +115,5 @@ export const Square = ({ value, onClick }) => {
     </button>
   );
 };
+
+export default TicTacToe

@@ -1,42 +1,45 @@
-import RandomColor from "../RandomColor";
-import { TicTacToe } from "../TicTacToe";
-import Accordion from "../accordion/accordion";
-import LightDarkMode from "../light-dark-mode/Light-dark-mode";
-import TreeView from "../tree-view/TreeView";
+import React, { lazy, useContext } from "react";
 import { FeatureFlagsContext } from "./context/FeatureFlagsContext";
 import menus from "../tree-view/data";
-import TabTest from "../tree-view/custom-tabs/Tab-test";
-import { useContext } from "react";
 
-export const FeatureFlags = () => {
+// Lazy loading components
+const LazyLightDarkMode = lazy(
+  () => import("../light-dark-mode/Light-dark-mode"),
+);
+const LazyTicTacToe = lazy(() => import("../TicTacToe"));
+const LazyRandomColor = lazy(() => import("../RandomColor"));
+const LazyAccordion = lazy(() => import("../accordion/accordion"));
+const LazyTreeView = lazy(() => import("../tree-view/TreeView"));
+const LazyTabTest = lazy(() => import("../tree-view/custom-tabs/Tab-test"));
+
+export default function FeatureFlags() {
   const { loading, enabledFlags } = useContext(FeatureFlagsContext);
 
   const componentsToRender = [
     {
       key: "showLightAndDarkMode",
-      component: <LightDarkMode />,
+      component: <LazyLightDarkMode />,
     },
-
     {
       key: "showTicTacToeBoard",
-      component: <TicTacToe />,
+      component: <LazyTicTacToe />,
     },
     {
       key: "showRandomColorGenerator",
-      component: <RandomColor />,
+      component: <LazyRandomColor />,
     },
     {
       key: "showAccordion",
-      component: <Accordion />,
+      component: <LazyAccordion />,
     },
     {
       key: "showTreeView",
-      component: <TreeView menus={menus} />,
+      component: <LazyTreeView menus={menus} />,
     },
     {
-      key : 'showTabs',
-      component : <TabTest />
-    }
+      key: "showTabs",
+      component: <LazyTabTest />,
+    },
   ];
 
   function checkEnabledFlags(getCurrentKey) {
@@ -47,7 +50,9 @@ export const FeatureFlags = () => {
 
   return (
     <div>
-      <h1 className="text-2xl text-center py-4 bg-primary text-primary-foreground">Feature Flags</h1>
+      <h1 className="text-2xl text-center py-4 bg-primary text-primary-foreground">
+        Feature Flags
+      </h1>
       {componentsToRender.map((componentItem) =>
         checkEnabledFlags(componentItem.key) ? componentItem.component : null,
       )}

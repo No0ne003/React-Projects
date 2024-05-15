@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Modal } from "./Modal";
 
-export const ModalPopup = () => {
+const ModalPopup = () => {
   const [showModalPopup, setShowModalPopup] = useState(false)
 
   function handleToggleModalPopup() {
@@ -21,3 +21,5 @@ export const ModalPopup = () => {
     </div>
   );
 };
+
+export default ModalPopup

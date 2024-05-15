@@ -2,7 +2,7 @@ import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { Suggesstions } from "./Suggesstions";
 
-export const SearchAutoComplete = () => {
+const SearchAutoComplete = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
@@ -73,3 +73,5 @@ export const SearchAutoComplete = () => {
     </div>
   );
 };
+
+export default SearchAutoComplete

@@ -1,6 +1,6 @@
 import useWindowResize from "./useWindowResize";
 
-export const UseWindowResizeTest = () => {
+const UseWindowResizeTest = () => {
   const windowSize = useWindowResize();
   const { width, height } = windowSize;
 
@@ -20,3 +20,5 @@ export const UseWindowResizeTest = () => {
     </div>
   );
 };
+
+export default UseWindowResizeTest
