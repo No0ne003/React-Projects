@@ -1,15 +1,8 @@
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 
-export const TypewriterEffect = ({
-  words,
-  className,
-  cursorClassName,
-  setCursorVariant,
-}) => {
-  // split text inside of words into array of characters
+export const TypewriterEffect = ({ words, className, setCursorVariant }) => {
   const wordsArray = words.map((word) => {
     return {
       ...word,
@@ -45,14 +38,14 @@ export const TypewriterEffect = ({
             `text-foreground opacity-0 hidden`,
             word.className,
           );
-          const isPrimary =
-            word.className && word.className.includes("primary");
+          const hasCursorVariant =
+            word.cursorVariant && word.cursorVariant !== "";
           const spanProps = {
             initial: {},
             className: wordClassName,
           };
-          if (isPrimary) {
-            spanProps.onMouseEnter = handleMouseEnter;
+          if (hasCursorVariant) {
+            spanProps.onMouseEnter = () => handleMouseEnter(word.cursorVariant);
             spanProps.onMouseLeave = handleMouseLeave;
           }
           return (
@@ -70,7 +63,7 @@ export const TypewriterEffect = ({
     );
   };
 
-  const handleMouseEnter = () => setCursorVariant("bigText");
+  const handleMouseEnter = (cursorVariant) => setCursorVariant(cursorVariant);
   const handleMouseLeave = () => setCursorVariant("default");
 
   return (

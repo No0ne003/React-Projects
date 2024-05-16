@@ -21,6 +21,7 @@ function Home({ setCursorVariant }) {
     {
       text: "Projects",
       className: "primary text-primary dark:text-primary font-bold",
+      cursorVariant: 'bigText'
     },
   ];
 
@@ -56,7 +57,11 @@ function Home({ setCursorVariant }) {
                     key={item}
                     initial={{ width: 0 }}
                     animate={{ width: 150 }}
-                    transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{
+                      duration: 2,
+                      ease: [0.22, 1, 0.36, 1],
+                      delay: 0.3,
+                    }}
                     className="h-[1px] bg-primary"
                   />
                 ))}
