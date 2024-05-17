@@ -10,6 +10,7 @@ const SearchAutoComplete = () => {
   const [searchParam, setSearchParam] = useState(null);
   const [showDropDown, setShowDropDown] = useState(false);
   const [filteredUsers, setFilteredUsers] = useState([]);
+  const [controller, setController] = useState(null);
 
   function handleChange(event) {
     const query = event.target.value.toLowerCase();
@@ -26,16 +27,26 @@ const SearchAutoComplete = () => {
       setShowDropDown(false);
     }
   }
+
   function handleClick(event) {
-    setShowDropDown(false)
-    setSearchParam(event.target.innerText)
-    setFilteredUsers([])
+    setShowDropDown(false);
+    setSearchParam(event.target.innerText);
+    setFilteredUsers([]);
   }
 
   async function fetchListOfUsers() {
+    if (controller) {
+      controller.abort();
+    }
+
+    const newController = new AbortController();
+    setController(newController);
+
     try {
       setLoading(true);
-      const response = await fetch("https://dummyjson.com/users");
+      const response = await fetch("https://dummyjson.com/users", {
+        signal: newController.signal,
+      });
       const data = await response.json();
 
       console.log(data);
@@ -45,9 +56,11 @@ const SearchAutoComplete = () => {
         setError(null);
       }
     } catch (error) {
-      setLoading(false);
-      console.log(error);
-      setError(error);
+      if (error.name !== "AbortError") {
+        setLoading(false);
+        console.log(error);
+        setError(error);
+      }
     }
   }
 
@@ -66,9 +79,15 @@ const SearchAutoComplete = () => {
         name="search"
         placeholder="Search Users Here..."
       />
-      {loading ? <Loading /> : showDropDown && <Suggesstions handleClick={handleClick} data={filteredUsers} /> }
+      {loading ? (
+        <Loading />
+      ) : (
+        showDropDown && (
+          <Suggesstions handleClick={handleClick} data={filteredUsers} />
+        )
+      )}
     </div>
   );
 };
 
-export default SearchAutoComplete
+export default SearchAutoComplete;
