@@ -6,7 +6,8 @@ import { FaMapPin, FaWind } from "react-icons/fa6";
 import { WiHumidity } from "react-icons/wi";
 
 const WeatherApp = () => {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("marrakech");
+  const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [weatherData, setWeatherData] = useState(null);
 
@@ -30,7 +31,7 @@ const WeatherApp = () => {
   }
 
   function handleSearch() {
-    fetchWeatherData(search);
+    setSearch(input);
   }
 
   function getCurrentDate() {
@@ -43,18 +44,14 @@ const WeatherApp = () => {
   }
 
   useEffect(() => {
-    fetchWeatherData("marrakech");
-  }, []);
+    fetchWeatherData(search);
+  }, [search]);
 
   console.log(weatherData);
 
   return (
     <div className="container flex flex-col justify-start items-center gap-5 py-10 w-fit bg-secondary/40 aspect-[3/2]">
-      <Search
-        search={search}
-        setSearch={setSearch}
-        handleSearch={handleSearch}
-      />
+      <Search search={input} setSearch={setInput} handleSearch={handleSearch} />
       {loading ? (
         <LoadingMsg />
       ) : weatherData?.cod === "404" && weatherData?.message ? (
