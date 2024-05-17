@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 // layout
 import Header from "@/layouts/header";
@@ -48,6 +48,7 @@ const UseWindowResizeTest = lazy(
   () => import("./pages/CustomHooks/use-window-resize/test"),
 );
 const ScrollToSection = lazy(() => import("./pages/ScrollToSection"));
+const WeatherApp = lazy(() => import("@/pages/Weather-app/index"));
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -66,7 +67,7 @@ function App() {
 
       <Header setCursorVariant={setCursorVariant} />
       {location.pathname !== "/React-Projects/" && <GoBack />}
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<div className="absolute flex justify-center items-center m-auto inset-0"><Loading /></div>}>
         <Routes>
           <Route path="React-Projects">
             <Route
@@ -120,6 +121,7 @@ function App() {
               path="scroll-to-particular-section"
               element={<ScrollToSection />}
             />
+            <Route path="weather-app" element={<WeatherApp />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
