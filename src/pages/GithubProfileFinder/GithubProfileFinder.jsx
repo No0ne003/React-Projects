@@ -59,7 +59,9 @@ const GithubProfileFinder = () => {
         </Button>
       </div>
       {loading ? (
-        <Loading />
+        <div className="absolute flex justify-center items-center m-auto inset-0">
+          <Loading />
+        </div>
       ) : userData !== null ? (
         <div className="my-24">
           <User user={userData} />

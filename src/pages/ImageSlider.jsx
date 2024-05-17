@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import Loading from "@/components/ui/Loading";
 
 function ImageSlider({
   url = "https://meme-api.com/gimme",
@@ -34,7 +35,7 @@ function ImageSlider({
   }, [url]);
 
   if (loading) {
-    return <div>Loading data ! please wait</div>;
+    return <div className="absolute inset-0 m-auto flex justify-center items-center"><Loading /></div>;
   }
   if (errorMsg !== null) {
     return <div>Error occured ! {errorMsg}</div>;

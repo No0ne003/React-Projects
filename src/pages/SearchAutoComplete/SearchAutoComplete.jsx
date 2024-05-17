@@ -80,7 +80,9 @@ const SearchAutoComplete = () => {
         placeholder="Search Users Here..."
       />
       {loading ? (
-        <Loading />
+        <div className="absolute inset-0 m-auto flex justify-center items-center">
+          <Loading />
+        </div>
       ) : (
         showDropDown && (
           <Suggesstions handleClick={handleClick} data={filteredUsers} />

@@ -13,7 +13,9 @@ const UseFetchHookTest = () => {
         <span className="text-primary font-bold">useFetch</span> Hook
       </h1>
       {pending ? (
-        <Loading />
+        <div className="absolute inset-0 m-auto flex justify-center items-center">
+          <Loading />
+        </div>
       ) : error ? (
         <h3 className="text-rose-500 text-lg text-center">{error}</h3>
       ) : data && data.products && data.products.length ? (

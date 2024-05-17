@@ -35,7 +35,7 @@ function LoadMoreData() {
   }, [products]);
 
   if (loading) {
-    return <Loading />
+    return <div className="absolute inset-0 m-auto flex justify-center items-center"><Loading /></div>
   }
   console.log(products);
 
