@@ -50,7 +50,7 @@ const WeatherApp = () => {
   console.log(weatherData);
 
   return (
-    <div className="container flex flex-col justify-start items-center gap-5 py-10 w-fit bg-secondary/40 aspect-[3/2]">
+    <div className="container w-[90vw] sm:w-fit flex flex-col justify-start items-center gap-5 py-10 bg-secondary/40 aspect-[3/2]">
       <Search search={input} setSearch={setInput} handleSearch={handleSearch} />
       {loading ? (
         <LoadingMsg />
@@ -58,23 +58,23 @@ const WeatherApp = () => {
         <ErrorMsg />
       ) : (
         <div className="flex flex-col justify-center items-center gap-7 w-full">
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between flex-col sm:flex-row w-full">
             <div className="flex flex-col gap-6 px-2">
               <div>
                 <h2 className="flex gap-2 justify-center items-center">
                   <FaMapPin className="text-sm" />
                   {weatherData?.name}, <span>{weatherData?.sys?.country}</span>
                 </h2>
-                <span className="text-xs text-foreground/80">
+                <span className="text-xs text-foreground/80 flex items-center justify-center">
                   {getCurrentDate()}
                 </span>
               </div>
 
-              <div className="flex flex-col">
+              <div className="flex flex-col items-center">
                 <div className="text-4xl font-semibold">
                   {weatherData?.main?.temp}
                 </div>
-                <p className="flex justify-start items-center text-xs text-foreground/80">
+                <p className="justify-start items-center text-xs text-foreground/80 hidden xm:flex">
                   <span>
                     <img
                       className="w-7 grayscale"
@@ -125,7 +125,7 @@ const WeatherApp = () => {
             </div>
           </div>
 
-          <div className="w-full flex justify-evenly items-center">
+          <div className="w-full flex max-sm:gap-1 justify-center sm:justify-evenly items-center">
             <div className="flex justify-center items-cetner gap-3 py-1 px-2 bg-secondary rounded-lg">
               <FaWind size={20} />
               <p>{weatherData?.wind?.speed} km/h</p>
