@@ -48,8 +48,8 @@ function Home({ setCursorVariant }) {
   return (
     <main className="flex flex-col mb-32">
       <div className="landing relative mb-24 py-12 sm:py-16 lg:pt-20 xl:pb-0">
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col justify-end max-sm:h-[75vh]">
-          <div className="mx-auto max-w-3xl text-center">
+        <div className="relative mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end max-sm:h-[75vh]">
+          <div className="mx-auto text-center">
             <div className="flex items-center gap-2 sm:hidden">
               <div className="flex flex-col items-center gap-[1px]">
                 {["1", "2", "3"].map((item) => (
