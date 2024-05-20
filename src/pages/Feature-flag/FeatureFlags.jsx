@@ -6,8 +6,8 @@ import menus from "../tree-view/data";
 const LazyLightDarkMode = lazy(
   () => import("../light-dark-mode/Light-dark-mode"),
 );
-const LazyTicTacToe = lazy(() => import("../TicTacToe"));
-const LazyRandomColor = lazy(() => import("../RandomColor"));
+const LazyTicTacToe = lazy(() => import("../Tic-Tac-Toe/TicTacToe"));
+const LazyRandomColor = lazy(() => import("../Random-Color/RandomColor"));
 const LazyAccordion = lazy(() => import("../accordion/accordion"));
 const LazyTreeView = lazy(() => import("../tree-view/TreeView"));
 const LazyTabTest = lazy(() => import("../tree-view/custom-tabs/Tab-test"));

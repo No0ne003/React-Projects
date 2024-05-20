@@ -13,15 +13,15 @@ import GoBack from "./components/ui/GoBack";
 import menus from "./pages/tree-view/data";
 
 // pages
-const Home = lazy(() => import("@/pages/Home"));
-const NotFound = lazy(() => import("@/pages/404"));
+const Home = lazy(() => import("@/pages/Home/Home"));
+const NotFound = lazy(() => import("@/pages/404/404"));
 const Accordion = lazy(() => import("@/pages/accordion/accordion"));
-const RandomColor = lazy(() => import("@/pages/RandomColor"));
-const StarRating = lazy(() => import("@/pages/StarRating"));
-const ImageSlider = lazy(() => import("@/pages/ImageSlider"));
-const LoadMoreData = lazy(() => import("@/pages/LoadMoreData"));
+const RandomColor = lazy(() => import("@/pages/Random-Color/RandomColor"));
+const StarRating = lazy(() => import("@/pages/StarRating/StarRating"));
+const ImageSlider = lazy(() => import("@/pages/Image-Slider/ImageSlider"));
+const LoadMoreData = lazy(() => import("@/pages/Load-More-Data/LoadMoreData"));
 const TreeView = lazy(() => import("@/pages/tree-view/TreeView"));
-const QRCodeGenerator = lazy(() => import("@/pages/QRCodeGenerator"));
+const QRCodeGenerator = lazy(() => import("@/pages/Qr-Code-Generator/QRCodeGenerator"));
 const LightDarkMode = lazy(
   () => import("@/pages/light-dark-mode/Light-dark-mode"),
 );
@@ -33,7 +33,7 @@ const GithubProfileFinder = lazy(
 const SearchAutoComplete = lazy(
   () => import("@/pages/SearchAutoComplete/SearchAutoComplete"),
 );
-const TicTacToe = lazy(() => import("@/pages/TicTacToe"));
+const TicTacToe = lazy(() => import("@/pages/Tic-Tac-Toe/TicTacToe"));
 const FeatureFlagGlobalState = lazy(
   () => import("@/pages/Feature-flag/context/FeatureFlagsContext"),
 );
@@ -47,7 +47,7 @@ const UseOnClickOutsideTest = lazy(
 const UseWindowResizeTest = lazy(
   () => import("./pages/CustomHooks/use-window-resize/test"),
 );
-const ScrollToSection = lazy(() => import("./pages/ScrollToSection"));
+const ScrollToSection = lazy(() => import("./pages/Scroll-to-section/ScrollToSection"));
 const WeatherApp = lazy(() => import("@/pages/Weather-app/index"));
 
 function App() {

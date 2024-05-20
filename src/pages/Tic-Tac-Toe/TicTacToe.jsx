@@ -75,7 +75,7 @@ const TicTacToe = () => {
             <span className="font-bold font-mono text-primary">{winner}</span>
           </div>
         ) : isDraw ? (
-          <div className="text-5xl">It's a draw!</div>
+          <div className="text-5xl">It&apos;s a draw!</div>
         ) : null}{" "}
       </div>
       <div className="shadow-2xl">
