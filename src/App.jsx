@@ -58,7 +58,7 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
       <div className="hidden dark:block">
         <Starfield
-          starCount={500}
+          starCount={250}
           starColor={[205, 214, 244]}
           speedFactor={0.05}
           backgroundColor="black"
