@@ -27,8 +27,8 @@ const Footer = memo(function Footer({ setCursorVariant }) {
 
 const Content = ({ setCursorVariant }) => {
   return (
-    <div className="relative bg-secondary/40 overflow-hidden py-8 px-12 w-full h-full flex flex-col items-center border-border/50 border-2">
-      <p className="absolute top-[-5%] sm:top-[-10%] left-3 sm:left-10 text-4xl sm:text-7xl max-w-full md:max-w-8xl font-bold text-gray-500/60">
+    <div className="relative bg-secondary/40 overflow-hidden py-8 px-12 w-full h-full flex flex-col items-center gap-3 border-border/50 border-2">
+      <p className="self-start text-4xl sm:text-7xl max-w-full md:max-w-8xl font-bold text-gray-500/60">
         Awesome React js Projects
       </p>
 

@@ -20,8 +20,8 @@ function Home({ setCursorVariant }) {
     },
     {
       text: "Projects",
-      className: "primary text-primary dark:text-primary font-bold",
-      cursorVariant: 'bigText'
+      className: "text-primary dark:text-primary",
+      cursorVariant: "bigText",
     },
   ];
 
@@ -72,7 +72,7 @@ function Home({ setCursorVariant }) {
             <TypewriterEffect
               words={words}
               className={
-                "text-start leading-[1.1] sm:leading-sm mt-5 sm:text-center h-[282px] md:h-[150px]"
+                "text-start leading-[1.1] sm:leading-sm mt-5 sm:text-center h-[282px] md:h-[150px] font-bold"
               }
               setCursorVariant={setCursorVariant}
             />
