@@ -69,7 +69,7 @@
   }
 
   #root {
-    @apply h-screen w-screen flex flex-col overflow-x-hidden;
+    @apply h-screen w-screen flex flex-col overflow-x-hidden box-border;
   }
 
   input::-webkit-outer-spin-button,

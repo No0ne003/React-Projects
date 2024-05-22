@@ -86,6 +86,7 @@ function App() {
               element={
                 <>
                   <Home setCursorVariant={setCursorVariant} />
+                  <Footer setCursorVariant={setCursorVariant} />
                   <Cursor cursorVariant={cursorVariant} />
                 </>
               }
@@ -136,8 +137,6 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
-
-        <Footer setCursorVariant={setCursorVariant} />
       </Suspense>
     </ThemeProvider>
   );
