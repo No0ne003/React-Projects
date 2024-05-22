@@ -1,22 +1,24 @@
-import { Button } from "@/components/ui/button"
-import PropTypes from 'prop-types';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
-function NavLinks(props) {
+function NavLinks({ setCursorVariant, link, icon, name }) {
+  const handleMouseEnter = () => setCursorVariant("text");
+  const handleMouseLeave = () => setCursorVariant("default");
 
-  return(
-    <a target="_blank" href={props.link} rel="noopener" tabIndex="-1">
-      <Button variant="ghost"  size='icon'>
-        <img className="size-4" src={props.logo} alt={props.name} />
-        <span className="sr-only">{props.name}</span>
-      </Button>
-    </a>
-  )
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      asChild
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Link to={link} rel="noopener" tabIndex="-1" target="_blank">
+        {icon}
+        <span className="sr-only">{name}</span>
+      </Link>
+    </Button>
+  );
 }
 
-NavLinks.propTypes = {
-  link: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
-}
-
-export default NavLinks
+export default NavLinks;

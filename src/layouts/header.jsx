@@ -1,20 +1,35 @@
 import { memo } from "react";
 // Assets
-import githubLogoDark from "@/assets/svg/github-mark-white.svg";
-import githubLogoLight from "@/assets/svg/github-mark.svg";
 import palestineSvg from "@/assets/svg/Flag_of_Palestine.svg";
+import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
 // Components
 import { Link } from "react-router-dom";
 import { ModeToggle } from "@/components/mode-toggle";
 import NavLinks from "@/components/ui/NavLinks";
 import { Button } from "@/components/ui/button";
-import useWhatTheme from "@/lib/utils";
+
+const socialLinks = [
+  {
+    link: "https://github.com/No0ne003/React-Projects",
+    icon: <FaGithub size={15} />,
+    name: "Github",
+  },
+  {
+    link: "https://instagram.com/No0ne.003",
+    icon: <FaInstagram size={15} />,
+    name: "instagram",
+  },
+  {
+    link: "https://x.com/No0ne003",
+    icon: <FaTwitter size={15} />,
+    name: "twitter",
+  },
+];
 
 const Header = memo(function Header({ setCursorVariant }) {
   const handleMouseEnter = () => setCursorVariant("text");
   const handleMouseLeave = () => setCursorVariant("default");
-  const { theme } = useWhatTheme();
 
   return (
     <header className="bg-background px-6 py-3 max-h-[60px] w-full z-50">
@@ -22,7 +37,7 @@ const Header = memo(function Header({ setCursorVariant }) {
         <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <Logo />
         </span>
-        <Navigation setCursorVariant={setCursorVariant} theme={theme} />
+        <Navigation setCursorVariant={setCursorVariant} />
       </div>
     </header>
   );
@@ -41,41 +56,23 @@ function Logo() {
   );
 }
 
-const Navigation = ({ setCursorVariant, theme }) => {
-  const handleMouseEnter = () => setCursorVariant("text");
-  const handleMouseLeave = () => setCursorVariant("default");
-
+const Navigation = ({ setCursorVariant }) => {
   return (
-    <nav className="flex items-center gap-2 sm:gap-6">
-      <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <DonateToPalestine />
-      </span>
-      <span onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        <NavLinks
-          logo={theme === "dark" ? githubLogoDark : githubLogoLight}
-          name="Github"
-          link="https://github.com/No0ne003/React-Project"
-        />
-      </span>
+    <nav className="flex items-center space-x-6">
+      <div className="flex items-center gap-3">
+        {socialLinks.map((social, index) => (
+          <NavLinks
+            key={index}
+            link={social.link}
+            icon={social.icon}
+            name={social.name}
+            setCursorVariant={setCursorVariant}
+          />
+        ))}
+      </div>
       <ModeToggle />
     </nav>
   );
 };
-
-function DonateToPalestine() {
-  return (
-    <Button variant="outline" asChild>
-      <a
-        className="sm:space-x-2 sm:flex sm:items-center"
-        href="https://donate.unrwa.org/gaza/~my-donation?_cv=1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img className="size-4" src={palestineSvg} alt="Palestine" />
-        <span className="hidden sm:block">Donate Now</span>
-      </a>
-    </Button>
-  );
-}
 
 export default Header;

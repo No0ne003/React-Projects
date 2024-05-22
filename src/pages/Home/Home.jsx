@@ -46,7 +46,7 @@ function Home({ setCursorVariant }) {
   };
 
   return (
-    <main className="flex flex-col mb-32">
+    <main className="flex flex-col">
       <div className="landing relative mb-24 py-12 sm:py-16 lg:pt-20 xl:pb-0">
         <div className="relative mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-end max-sm:h-[75vh]">
           <div className="mx-auto max-w-3xl text-center">
