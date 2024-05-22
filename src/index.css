@@ -94,21 +94,6 @@
     background-size: 24px 24px;
   }
 
-  .footer-shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Ensures shadow covers the entire footer */
-    background-image: linear-gradient(to top,
-        rgba(255, 0, 0, 0),
-        theme(colors.gray.900));
-    /* Creates the red gradient shadow */
-    z-index: -1;
-    /* Place the shadow behind the footer content */
-  }
-
   /* loading*/
   .loader {
     width: 80px;
