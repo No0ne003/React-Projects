@@ -15,6 +15,7 @@ const Footer = memo(function Footer({ setCursorVariant }) {
       className="relative mt-20 w-full min-h-[220px]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
+      <div className="footer-shadow" />
       <div className="relative h-[calc(100vh+220px)] -top-[100vh]">
         <div className="h-[220px] sticky top-[calc(100vh-220px)]">
           <Content setCursorVariant={setCursorVariant} />
