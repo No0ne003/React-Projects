@@ -11,6 +11,7 @@ import Loading from "@/components/ui/Loading";
 import GoBack from "./components/ui/GoBack";
 // Data
 import menus from "./pages/tree-view/data";
+import Footer from "./layouts/Footer";
 
 // pages
 const Home = lazy(() => import("@/pages/Home/Home"));
@@ -21,7 +22,9 @@ const StarRating = lazy(() => import("@/pages/StarRating/StarRating"));
 const ImageSlider = lazy(() => import("@/pages/Image-Slider/ImageSlider"));
 const LoadMoreData = lazy(() => import("@/pages/Load-More-Data/LoadMoreData"));
 const TreeView = lazy(() => import("@/pages/tree-view/TreeView"));
-const QRCodeGenerator = lazy(() => import("@/pages/Qr-Code-Generator/QRCodeGenerator"));
+const QRCodeGenerator = lazy(
+  () => import("@/pages/Qr-Code-Generator/QRCodeGenerator"),
+);
 const LightDarkMode = lazy(
   () => import("@/pages/light-dark-mode/Light-dark-mode"),
 );
@@ -47,7 +50,9 @@ const UseOnClickOutsideTest = lazy(
 const UseWindowResizeTest = lazy(
   () => import("./pages/CustomHooks/use-window-resize/test"),
 );
-const ScrollToSection = lazy(() => import("./pages/Scroll-to-section/ScrollToSection"));
+const ScrollToSection = lazy(
+  () => import("./pages/Scroll-to-section/ScrollToSection"),
+);
 const WeatherApp = lazy(() => import("@/pages/Weather-app/index"));
 
 function App() {
@@ -67,7 +72,13 @@ function App() {
 
       <Header setCursorVariant={setCursorVariant} />
       {location.pathname !== "/React-Projects/" && <GoBack />}
-      <Suspense fallback={<div className="absolute flex justify-center items-center m-auto inset-0"><Loading /></div>}>
+      <Suspense
+        fallback={
+          <div className="absolute flex justify-center items-center m-auto inset-0">
+            <Loading />
+          </div>
+        }
+      >
         <Routes>
           <Route path="React-Projects">
             <Route
@@ -126,6 +137,7 @@ function App() {
           </Route>
         </Routes>
       </Suspense>
+      <Footer setCursorVariant={setCursorVariant} />
     </ThemeProvider>
   );
 }
