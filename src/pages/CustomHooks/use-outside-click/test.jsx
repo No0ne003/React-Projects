@@ -8,7 +8,7 @@ const UseOnClickOutsideTest = () => {
   useOutsideClick(ref, () => setShowContent(false));
 
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="container flex justify-center items-center h-screen">
       {showContent ? (
         <div
           ref={ref}
