@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { memo } from "react";
-import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const socialLinks = [
   { link: "https://github.com/No0ne003/React-Projects", icon: <FaGithub /> },
-  { link: "https://instagram.com/No0ne.003", icon: <FaInstagram /> },
-  { link: "https://x.com/No0ne003", icon: <FaTwitter /> },
 ];
 
 const Footer = memo(function Footer({ setCursorVariant }) {

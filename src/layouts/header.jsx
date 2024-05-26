@@ -1,29 +1,17 @@
 import { memo } from "react";
 // Assets
-import palestineSvg from "@/assets/svg/Flag_of_Palestine.svg";
-import { FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 // Components
 import { Link } from "react-router-dom";
 import { ModeToggle } from "@/components/mode-toggle";
 import NavLinks from "@/components/ui/NavLinks";
-import { Button } from "@/components/ui/button";
 
 const socialLinks = [
   {
     link: "https://github.com/No0ne003/React-Projects",
     icon: <FaGithub size={15} />,
     name: "Github",
-  },
-  {
-    link: "https://instagram.com/No0ne.003",
-    icon: <FaInstagram size={15} />,
-    name: "instagram",
-  },
-  {
-    link: "https://x.com/No0ne003",
-    icon: <FaTwitter size={15} />,
-    name: "twitter",
   },
 ];
 
