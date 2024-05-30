@@ -67,6 +67,9 @@
   body {
     @apply bg-background text-foreground font-poppins;
   }
+  #root:hover > .cursor {
+    opacity: 1
+  }
 
   #root {
     @apply h-screen w-screen flex flex-col overflow-x-hidden box-border;
