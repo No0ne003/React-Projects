@@ -72,7 +72,7 @@ const WeatherApp = () => {
 
               <div className="flex flex-col items-center">
                 <div className="text-4xl font-semibold">
-                  {weatherData?.main?.temp}
+                  {(weatherData?.main?.temp - 273).toFixed(2)} °C 
                 </div>
                 <p className="justify-start items-center text-xs text-foreground/80 hidden xm:flex">
                   <span>
