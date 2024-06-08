@@ -54,6 +54,7 @@ const ScrollToSection = lazy(
   () => import("./pages/Scroll-to-section/ScrollToSection"),
 );
 const WeatherApp = lazy(() => import("@/pages/Weather-app/index"));
+const SelectComponent = lazy(() => import("@/pages/Select-Component/index"))
 
 function App() {
   const [cursorVariant, setCursorVariant] = useState("default");
@@ -134,6 +135,7 @@ function App() {
               element={<ScrollToSection />}
             />
             <Route path="weather-app" element={<WeatherApp />} />
+            <Route path="select-component" element={<SelectComponent />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

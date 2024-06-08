@@ -3,6 +3,7 @@ export const projects = [
     id: 1,
     name: "Accordion",
     path: "accordion",
+    tags: ['component']
   },
   {
     id: 2,
@@ -14,11 +15,13 @@ export const projects = [
     id: 3,
     name: "Star Rating",
     path: "star-rating",
+    tags: ['component']
   },
   {
     id: 4,
     name: "Image Slider",
     path: "image-slider",
+    tags: ['component']
   },
   {
     id: 5,
@@ -30,6 +33,7 @@ export const projects = [
     id: 6,
     name: "Tree View",
     path: "tree-view",
+    tags: ['component']
   },
   {
     id: 7,
@@ -41,16 +45,19 @@ export const projects = [
     id: 8,
     name: "Light Dark Mode",
     path: "light-dark-mode",
+    tags: ['component']
   },
   {
     id: 9,
     name: "Custom Tabs",
     path: "custom-tabs",
+    tags: ['component']
   },
   {
     id: 10,
     name: "Modal Popup",
     path: "modal-popup",
+    tags: ['component']
   },
   {
     id: 11,
@@ -62,6 +69,7 @@ export const projects = [
     id: 12,
     name: "Search Auto-Complete",
     path: "search-auto-complete",
+    tags: ['component']
   },
   {
     id: 13,
@@ -73,6 +81,7 @@ export const projects = [
     id: 14,
     name: "Feature Flags",
     path: "feature-flags",
+    tags: ['component']
   },
   {
     id: 15,
@@ -103,5 +112,11 @@ export const projects = [
     name: 'Weather App',
     path: 'weather-app',
     tags: ['project']
+  },
+  {
+    id: 20,
+    name: 'Select component',
+    path: 'select-component',
+    tags: ['component']
   }
 ];
