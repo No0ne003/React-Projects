@@ -5,10 +5,9 @@ export default {
   darkMode: ["class"],
   content: [
     "./index.html",
-    "./pages/*.{js,jsx}",
-    "./pages/**/*.{js,jsx}",
-    "./components/**/*.{js,jsx}",
-    "./src/**/*.{js,jsx}",
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   prefix: "",
   theme: {
